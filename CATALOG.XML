@@ -1,5 +1,6 @@
+<?xml version="1.0"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-	<rewriteSystem systemIdStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport/xsl/"/>
-	<rewriteURI uriStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport/xsl/"/>
+	<rewriteSystem systemIdStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport"/>
+	<rewriteURI uriStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport"/>
 	<nextCatalog catalog="./docbook-xsl/catalog.xml"/>
 </catalog>
