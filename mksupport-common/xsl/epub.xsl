@@ -11,7 +11,7 @@
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
-  <xsl:import href="common.xsl"/>
+  <xsl:import href="common-html.xsl"/>
   <!--
 DocBook XSL 1.75.2: Nav headers are invalid XHTML (table width element).
 Suppressed by default in Docbook XSL 1.76.1 epub.xsl.

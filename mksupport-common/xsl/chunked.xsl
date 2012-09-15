@@ -11,7 +11,7 @@
 -->
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl"/>
-  <xsl:import href="common.xsl"/>
+  <xsl:import href="common-html.xsl"/>
 
   <xsl:param name="navig.graphics.path">images/icons/</xsl:param>
   <xsl:param name="admon.graphics.path">images/icons/</xsl:param>
