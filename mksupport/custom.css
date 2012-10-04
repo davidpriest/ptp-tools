@@ -1,7 +1,0 @@
-hr{color:blue;}
-p.remark{margin:0em;padding:0em 0.25em;background-color:yellow;}
-span.remark{background-color:yellow;}
-span.remark:before{content:"# ";}
-.review{border: thin solid red;}
-.review + *{border: thin solid red;}
-.draft + *{border: thin solid gray;}
