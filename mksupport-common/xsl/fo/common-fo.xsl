@@ -44,11 +44,12 @@
   <xsl:param name="dingbat.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="draft.watermark.image" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/draft.png')"/>
   <xsl:param name="fop1.extensions" select="1"/>
+  <xsl:param name="header.column.widths">2 1 1</xsl:param>
   <xsl:param name="hyphenate">false</xsl:param>
   <xsl:param name="line-height" select="1.2"/>
   <xsl:param name="monospace.font.family" select="'monospace,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="sans.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="section.autolabel">0</xsl:param>
+  <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.autolabel.max.depth">3</xsl:param>
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
   <xsl:param name="shade.verbatim" select="1"/>

@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common" xmlns:d="http://docbook.org/ns/docbook" version="1.0" exclude-result-prefixes="exsl d">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:exsl="http://exslt.org/common" version="1.0" exclude-result-prefixes="exsl">
 
-<!-- This stylesheet was created by template/titlepage.xsl; do not edit it by hand. -->
+<!-- This stylesheet was created by template/titlepage.xsl-->
 
 <xsl:template name="article.titlepage.recto">
   <xsl:choose>
