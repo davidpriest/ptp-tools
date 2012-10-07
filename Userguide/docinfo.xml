@@ -1,0 +1,30 @@
+<cover>
+	<para xml:id="brand">Product Brand Name</para>
+	<para xml:id="docinfo_sku">product sku</para>
+	<para xml:id="docinfo_copyright">&#xA9; 2012, My Big Company, Inc. All rights reserved.</para>
+	<para xml:id="docinfo_org">MBCI</para>
+	<para xml:id="docinfo_orgurl">www.w3.org</para>
+</cover>
+
+
+<legalnotice>
+	<title>Disclaimer</title>
+  <para>Copyright &#xA9; 2012 <orgname class="corporation">My Big Company,
+  Inc.</orgname></para>
+  <para>This documentation and any accompanying software are released
+  &#x201C;as is.&#x201D; My Big Company, Inc. (MBCI), makes no warranty of any kind, expressed or
+  implied, concerning these materials, including without limitation, any
+  warranties of merchantability or fitness for a particular purpose. In no
+  event will MBCI be liable for any damages, including any lost profits,
+  lost savings, or other incidental or consequential damages arising out of
+  the use, or inability of use, of documentation or any accompanying software,
+  even if informed in advance of the possibility of such damages.</para>
+	<title>Trademarks</title>
+  <para><trademark class="registered">MBCI</trademark> is a registered
+  trademarks of <orgname class="corporation">My Big Company, Inc.</orgname></para>
+  <para><trademark class="registered">Windows</trademark>, <trademark
+  class="registered">Internet Explorer</trademark>, and <trademark
+  class="registered">Windows Vista</trademark> are registered trademarks of
+  <orgname class="corporation">Microsoft Corporation</orgname> in the United
+  States and/or other countries.</para>
+</legalnotice>

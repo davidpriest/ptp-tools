@@ -1,0 +1,8 @@
+Plain Text Publishing User Guide
+================================
+:xshowcomments:
+
+== Welcome to Plain Text Publishing
+
+:leveloffset: 2
+include::ABOUT.txt[]

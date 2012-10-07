@@ -1,0 +1,20 @@
+[OPTIONS]
+Binary TOC=Yes
+Compatibility=1.1 or later
+Compiled file=_Userguide.chm
+Contents file=_Userguide.hhc
+Default Window=Main
+Default topic=_Userguide.htmlhelp/index.html
+Display compile progress=Yes
+Full-text search=Yes
+Language=0x0409 English (UNITED STATES)
+Title=Plain Text Publishing User Guide
+Enhanced decompilation=No
+
+[WINDOWS]
+Main="Plain Text Publishing User Guide","_Userguide.hhc",,"_Userguide.htmlhelp/index.html","_Userguide.htmlhelp/index.html",,,,,0x2520,,0x603006,,,,,,,,0
+
+
+[FILES]
+_Userguide.htmlhelp/index.html
+_Userguide.htmlhelp/ch01.html
