@@ -27,7 +27,7 @@
 								</fo:table-cell>
 								<fo:table-cell number-rows-spanned="2" text-align="right" end-indent="0in" padding="0in">
 									<fo:block start-indent="0pt" font-size="14pt" margin="0pt">
-										<fo:external-graphic content-height="0.4in" src="{$DOCTOOLS}/mksupport-common/images/msli-wave-logo.svg"/>
+										<fo:external-graphic content-height="0.4in" src="{$DOCTOOLS}/mksupport-common/images/thinking_sound_logo_blue.svg"/>
 									</fo:block>
 								</fo:table-cell>
 							</fo:table-row>
@@ -43,8 +43,8 @@
 							<fo:table-row>
 								<fo:table-cell>
 									<fo:block start-indent="0pt">
-										<xsl:if test="$asciidoc.sku">
-											<xsl:value-of select="$asciidoc.sku"/>
+										<xsl:if test="$docinfo.sku">
+											<xsl:value-of select="$docinfo.sku"/>
 										</xsl:if>
 									</fo:block>
 								</fo:table-cell>
@@ -67,7 +67,7 @@
 							<fo:table-row>
 								<fo:table-cell start-indent="0in" padding="0in">
 									<fo:block start-indent="0pt" font-size="14pt" margin="0in">
-										<fo:external-graphic content-height="0.5in" src="{$DOCTOOLS}/mksupport-common/images/msli-wave-logo.svg"/>
+										<fo:external-graphic content-height="0.5in" src="{$DOCTOOLS}/mksupport-common/images/thinking_sound_logo_blue.svg"/>
 									</fo:block>
 								</fo:table-cell>
 							</fo:table-row>
@@ -88,7 +88,7 @@
 									<fo:block>
 										<xsl:value-of select="$docinfo.copyright"/>
 									</fo:block>
-									<fo:block>part no. <fo:inline><xsl:value-of select="$docinfo.sku"/></fo:inline></fo:block>
+									<fo:block>part no. <fo:inline><xsl:value-of select="$asciidoc.docid"/></fo:inline></fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 						</fo:table-body>

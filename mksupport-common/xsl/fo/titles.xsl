@@ -12,7 +12,7 @@
                <fo:table-row>
                   <fo:table-cell start-indent="0pt" width="{$body.start.indent}" padding-right="{$body.start.indent}">
                      <fo:block>
-                        <fo:external-graphic content-width="{$body.start.indent}" src="url({$logo}.{$cover.graphic.default.extension})"/>
+                        <fo:external-graphic content-width="{$logo.width}" src="url({$logo})"/>
                      </fo:block>
                   </fo:table-cell>
                   <fo:table-cell>
@@ -32,7 +32,7 @@
                <fo:table-row>
                  <fo:table-cell start-indent="0pt" width="{$body.start.indent}" padding-right="{$body.start.indent}">
                     <fo:block>
-                       <fo:external-graphic content-width="{$body.start.indent}" src="url({$logo}.{$cover.graphic.default.extension})"/>
+                       <fo:external-graphic content-width="{$logo.width}" src="url({$logo})"/>
                     </fo:block>
                  </fo:table-cell>
                   <fo:table-cell>

@@ -79,19 +79,19 @@
 					<fo:page-number/>
 				</xsl:when>
 				<xsl:when test="$double.sided != 0 and $sequence='even' and $position='right'">
-					<fo:external-graphic content-height="1em" src="url({$logo}.{$cover.graphic.default.extension})"/>
+					<fo:external-graphic content-height="1em" src="url({$logo})"/>
 				</xsl:when>
 				<xsl:when test="$double.sided != 0 and ($sequence='odd' or $sequence='first') and $position='right'">
 					<fo:page-number/>
 				</xsl:when>
 				<xsl:when test="$double.sided != 0 and $sequence='odd' and $position='left'">
-					<fo:external-graphic content-height="1em" src="url({$logo}.{$cover.graphic.default.extension})"/>
+					<fo:external-graphic content-height="1em" src="url({$logo})"/>
 				</xsl:when>
 				<xsl:when test="$double.sided=0 and $position='right' and $pageclass!='frontcover' and $pageclass!='backcover'">
 					<fo:page-number/>
 				</xsl:when>
 				<xsl:when test="$double.sided=0 and $position='left' and $sequence!='first' and $pageclass!='frontcover' and $pageclass!='backcover'">
-					<fo:external-graphic content-height="1em" src="url({$logo}.{$cover.graphic.default.extension})"/>
+					<fo:external-graphic content-height="1em" src="url({$logo})"/>
 				</xsl:when>
 				<xsl:when test="$sequence='blank' and $pageclass!='frontcover' and $pageclass!='backcover'">
 					<xsl:choose>
@@ -118,10 +118,10 @@
 		<fo:simple-page-master page-height="{$page.height}" page-width="{$page.width}" master-name="fullpage">
 			<xsl:choose>
 				<xsl:when test="$draft.mode='yes'">
-					<fo:region-body background-color="lightgrey" margin="0in"/>
+					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/msli-honeycomb-background-draft.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/msli-honeycomb-background.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
+					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/msli-honeycomb-background-release.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</fo:simple-page-master>
