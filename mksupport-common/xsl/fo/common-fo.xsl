@@ -17,6 +17,7 @@
 	<xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/msli-wave-logo.svg')"/>
 	<xsl:param name="logo.width">66%</xsl:param>
 	<xsl:param name="meyer.primary.blue">rgb(97,139,199)</xsl:param>
+	<xsl:param name="titlepage.title.color">rgb(97,139,199)</xsl:param>
 	<xsl:param name="procedure.section.ttl.bkg">white</xsl:param>
 	<xsl:param name="procedure.section.ttl.color" select="$meyer.primary.blue"/>
 	<xsl:param name="tasksection.ttl.bkg">white</xsl:param>

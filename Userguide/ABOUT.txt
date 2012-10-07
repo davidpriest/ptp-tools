@@ -1,0 +1,42 @@
+LIBRARY STRUCTURE
+=================
+
+Library content consists of prose and “chunks”. Using inclusion, prose is
+intermixed with topical “chunks” to ultimately create a book or wiki. Books
+tend to take a linear approach to a topic, adding extra information to core
+units of information: exposition surrounding a “chunk” identified as a List,
+Task, Figure, Function, etc.
+
+//Wikis tend to be less linear. It is important to minimize the drill-down
+//depth and maximize cross-connections. This can be helped by modularizing
+//“chunks” for maximum re-use. Look for opportunities to reference or include
+//existing “chunks”, and then find ways to add those chunks to existing and
+//new categories
+
+Documention source directories and filenames are structured for human use:
+
+* `_filename`
+  - root document name is prefixed with an underscore.
+  - assists in command line autocompletion.
+  - file list placement tends to be consistently at the top or bottom
+  - content mainly comprises top-level inclusions, ie. articles and chapters.
+  - transformed to the ultimate deliverable: a PDF, HTML, EPub, etc.
+
+* `filename`
+  - no prefixed underscore.
+  - not publishable from commandline.
+  - content mainly comprises limited prose introducing mid-level inclusions,
+    ie. chapters and sections.
+  - may need to use macros to adjust inclusion title levels
+
+* `directoryname`
+  - contains fine-grained “chunks”.
+  - for inclusion in mid-level content, ie. chapters and sections.
+  - named to indicate content/relevance.
+
+* `directoryname/filename`
+  - topical “chunks”
+  - content comprises prose and lower-level inclusions, ie. sections, lists,
+    tables, etc.
+  - content comprises lowest-level chunks, ie. List, Task, Figure, etc.
+  - filenames to indicate content; avoid redundancy w/directory “chunk” category
