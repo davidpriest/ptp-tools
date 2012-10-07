@@ -14,14 +14,13 @@
 	<xsl:param name="docinfo.org" select="//cover/para[@xml:id='docinfo_org']"/>
 	<xsl:param name="docinfo.orgurl" select="//cover/para[@xml:id='docinfo_orgurl']"/>
 	<xsl:param name="docinfo.sku" select="//cover/para[@xml:id='docinfo_sku']"/>
-	<xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/msli-wave-logo.svg')"/>
+	<xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/logo.svg')"/>
 	<xsl:param name="logo.width">66%</xsl:param>
-	<xsl:param name="meyer.primary.blue">rgb(97,139,199)</xsl:param>
 	<xsl:param name="titlepage.title.color">rgb(97,139,199)</xsl:param>
 	<xsl:param name="procedure.section.ttl.bkg">white</xsl:param>
-	<xsl:param name="procedure.section.ttl.color" select="$meyer.primary.blue"/>
+	<xsl:param name="procedure.section.ttl.color" select="$titlepage.title.color"/>
 	<xsl:param name="tasksection.ttl.bkg">white</xsl:param>
-	<xsl:param name="tasksection.ttl.color" select="$meyer.primary.blue"/>
+	<xsl:param name="tasksection.ttl.color" select="$titlepage.title.color"/>
 	<!-- Stock parameters -->
 	<xsl:param name="local.l10n.xml" select="document('gentext.xml')"/>
 	<xsl:param name="draft.mode">
