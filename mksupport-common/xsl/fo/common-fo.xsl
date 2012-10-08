@@ -3,8 +3,8 @@
   See xsl-stylesheets/fo/param.xsl for all parameters.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
-  <xsl:param name="DOCTOOLS" select="'MUST PASS DOCTOOLS TO XSLTPROC!'"/>
-  <!-- Particular to customizations -->
+  <xsl:param name="DOCTOOLS" select="'MUST PASS $DOCTOOLS TO XSLTPROC!'"/>
+  <!-- PARTICULAR TO PTP-TOOLS CUSTOMIZATIONS -->
   <xsl:param name="banner" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/banner.svg')"/>
   <xsl:param name="bookinfo.title" select="//bookinfo/title/text()"/>
   <xsl:param name="cover.copyright" select="//cover/para[@xml:id='cover_copyright']"/>
@@ -16,7 +16,7 @@
   <xsl:param name="cover.version" select="//cover/para[@xml:id='cover_version']"/>
   <xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/logo.svg')"/>
   <xsl:param name="logo.width">3.5pc</xsl:param>
-  <xsl:param name="narrow.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="narrow.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="pantone202.primary.red">rgb(130,36,51)</xsl:param>
   <xsl:param name="pantone430.primary.grey">rgb(55,66,74)</xsl:param>
   <xsl:param name="procedure.section.ttl.bkg">white</xsl:param>
@@ -25,7 +25,7 @@
   <xsl:param name="tasksection.ttl.bkg">white</xsl:param>
   <xsl:param name="tasksection.ttl.color" select="$pantone202.primary.red"/>
 
-  <!-- Stock parameters -->
+  <!-- STOCK DOCBOOK XSL PARAMETERS -->
   <xsl:param name="local.l10n.xml" select="document('gentext.xml')"/>
   <xsl:param name="draft.mode">
     <xsl:choose>
@@ -37,24 +37,24 @@
   <xsl:param name="admon.graphics.extension" select="'.svg'"/>
   <xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
   <xsl:param name="alignment">left</xsl:param>
-  <xsl:param name="body.font.family" select="'serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="body.font.family" select="'serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="body.font.master">10.5</xsl:param>
   <xsl:param name="callout.defaultcolumn" select="'80'"/>
   <xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
-  <xsl:param name="dingbat.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="dingbat.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="draft.watermark.image" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/draft.png')"/>
   <xsl:param name="fop1.extensions" select="1"/>
   <xsl:param name="header.column.widths">2 1 1</xsl:param>
   <xsl:param name="hyphenate">false</xsl:param>
   <xsl:param name="line-height" select="1.2"/>
-  <xsl:param name="monospace.font.family" select="'monospace,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="sans.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="monospace.font.family" select="'monospace,Symbol,ZapfDingbats,Unicode'"/>
+  <xsl:param name="sans.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.autolabel.max.depth">3</xsl:param>
   <xsl:param name="section.label.includes.component.label">1</xsl:param>
   <xsl:param name="shade.verbatim" select="1"/>
-  <xsl:param name="symbol.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="title.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="symbol.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
+  <xsl:param name="title.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="variablelist.as.blocks" select="1"/>
   <xsl:param name="bridgehead.in.toc">
     <xsl:choose>
