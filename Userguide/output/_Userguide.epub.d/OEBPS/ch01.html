@@ -1,49 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 1. Welcome to Plain Text Publishing</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css"/><meta name="generator" content="DocBook XSL Stylesheets V1.77.1"/></head><body><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_welcome_to_plain_text_publishing"/>Chapter 1. Welcome to Plain Text Publishing</h1></div></div></div><div class="section"><div class="titlepage"><div><div><h1 class="title"><a id="_library_structure"/>1. LIBRARY STRUCTURE</h1></div></div></div><p>Library content consists of prose and “chunks”. Using inclusion, prose is
-intermixed with topical “chunks” to ultimately create a book or wiki. Books
-tend to take a linear approach to a topic, adding extra information to core
-units of information: exposition surrounding a “chunk” identified as a List,
-Task, Figure, Function, etc.</p><p>Documention source directories and filenames are structured for human use:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p class="simpara">
-<code class="literal">_filename</code>
-</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-root document name is prefixed with an underscore.
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 1. Welcome to Plain Text Publishing</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css"/><meta name="generator" content="DocBook XSL Stylesheets V1.77.1"/></head><body><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_welcome_to_plain_text_publishing"/>Chapter 1. Welcome to Plain Text Publishing</h1></div></div></div><p>'ptp-tools' provides a (nearly) self-supported plain text to PDF, ePub, and HTML
+publication system.</p><p>Installation requires:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+pre-installation of Java
 </li><li class="listitem">
-assists in command line autocompletion.
+pre-installation of Python
 </li><li class="listitem">
-file list placement tends to be consistently at the top or bottom
+creating a work directory
 </li><li class="listitem">
-content mainly comprises top-level inclusions, ie. articles and chapters.
+copying ptp-tools to the work directory
 </li><li class="listitem">
-transformed to the ultimate deliverable: a PDF, HTML, EPub, etc.
-</li></ul></div></li><li class="listitem"><p class="simpara">
-<code class="literal">filename</code>
-</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-no prefixed underscore.
+copying ptp-tools/template to the work directory
 </li><li class="listitem">
-not publishable from commandline.
-</li><li class="listitem">
-content mainly comprises limited prose introducing mid-level inclusions,
-    ie. chapters and sections.
-</li><li class="listitem">
-may need to use macros to adjust inclusion title levels
-</li></ul></div></li><li class="listitem"><p class="simpara">
-<code class="literal">directoryname</code>
-</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-contains fine-grained “chunks”.
-</li><li class="listitem">
-for inclusion in mid-level content, ie. chapters and sections.
-</li><li class="listitem">
-named to indicate content/relevance.
-</li></ul></div></li><li class="listitem"><p class="simpara">
-<code class="literal">directoryname/filename</code>
-</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
-topical “chunks”
-</li><li class="listitem">
-content comprises prose and lower-level inclusions, ie. sections, lists,
-    tables, etc.
-</li><li class="listitem">
-content comprises lowest-level chunks, ie. List, Task, Figure, etc.
-</li><li class="listitem">
-filenames to indicate content; avoid redundancy w/directory “chunk” category
-</li></ul></div></li></ul></div></div></div></body></html>
+using a plain text editor to tell the toolset where it is
+</li></ul></div><p>You can then rename the template to that of the documentation you’ll be
+creating and go to town.</p><p>To publish, open a terminal at the documentation directory and run
+mk_bash.sh or mk_win.bat.  The results will be in the <code class="literal">output</code> directory.</p></div></body></html>

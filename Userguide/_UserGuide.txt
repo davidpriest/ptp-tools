@@ -4,5 +4,24 @@ Plain Text Publishing User Guide
 
 == Welcome to Plain Text Publishing
 
-:leveloffset: 2
-include::ABOUT.txt[]
+xPT provides a (nearly) self-supported plain text to PDF, ePub, and HTML
+publication system.
+
+Installation requires:
+
+* pre-installation of Java
+* pre-installation of Python
+* creating a work directory
+* copying ptp-tools to the work directory
+* copying ptp-tools/template to the work directory
+* using a plain text editor to tell the toolset where it is
+
+You can then rename the template to that of the documentation you’ll be
+creating and go to town.
+
+To publish, open a terminal at the documentation directory and run
+mk_bash.sh or mk_win.bat.  The results will be in the `output` directory.
+
+
+:leveloffset: 1
+include::Structure.txt[]

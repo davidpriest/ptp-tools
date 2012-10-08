@@ -17,13 +17,12 @@
 	<xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/logo.svg')"/>
   <xsl:param name="logo.width">3.5pc</xsl:param>
   <xsl:param name="narrow.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
-  <xsl:param name="pantone202.primary.red">rgb(130,36,51)</xsl:param>
-  <xsl:param name="pantone430.primary.grey">rgb(55,66,74)</xsl:param>
+  <xsl:param name="titlepage.title.color">rgb(55,66,74)</xsl:param>
 	<xsl:param name="procedure.section.ttl.bkg">white</xsl:param>
-  <xsl:param name="procedure.section.ttl.color" select="$pantone202.primary.red"/>
+  <xsl:param name="procedure.section.ttl.color" select="$titlepage.title.color"/>
   <xsl:param name="release.name" select="//cover/para[@xml:id='releasename']"/>
 	<xsl:param name="tasksection.ttl.bkg">white</xsl:param>
-  <xsl:param name="tasksection.ttl.color" select="$pantone202.primary.red"/>
+  <xsl:param name="tasksection.ttl.color" select="$titlepage.title.color"/>
 
   <!-- STOCK DOCBOOK XSL PARAMETERS -->
 	<xsl:param name="local.l10n.xml" select="document('gentext.xml')"/>

@@ -11,10 +11,9 @@
 <UL><LI><OBJECT type="text/sitemap">
 <param name="Name" value="Welcome to Plain Text Publishing">
 <param name="Local" value="_Userguide.htmlhelp/ch01.html"></OBJECT></LI>
-<UL>
 <LI><OBJECT type="text/sitemap">
-<param name="Name" value="LIBRARY STRUCTURE">
-<param name="Local" value="_Userguide.htmlhelp/ch01.html#_library_structure"></OBJECT></LI>
-</UL></UL>
+<param name="Name" value="Structure">
+<param name="Local" value="_Userguide.htmlhelp/ch02.html"></OBJECT></LI>
+</UL>
 </UL>
 </BODY></HTML>

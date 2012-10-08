@@ -6,7 +6,7 @@
 <book lang="en">
 <bookinfo>
 <cover>
-<para xml:id='asciidoc_sku'>missing SKU</para>
+<para xml:id='asciidoc_docid'>missing docid</para>
 <para xml:id='asciidoc_release'>missing Release</para>
 </cover>
     <title>Plain Text Publishing User Guide</title>
@@ -43,8 +43,48 @@
 </bookinfo>
 <chapter id="_welcome_to_plain_text_publishing">
 <title>Welcome to Plain Text Publishing</title>
-<section id="_library_structure">
-<title>LIBRARY STRUCTURE</title>
+<simpara>'ptp-tools' provides a (nearly) self-supported plain text to PDF, ePub, and HTML
+publication system.</simpara>
+<simpara>Installation requires:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+pre-installation of Java
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+pre-installation of Python
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+creating a work directory
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+copying ptp-tools to the work directory
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+copying ptp-tools/template to the work directory
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+using a plain text editor to tell the toolset where it is
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>You can then rename the template to that of the documentation you’ll be
+creating and go to town.</simpara>
+<simpara>To publish, open a terminal at the documentation directory and run
+mk_bash.sh or mk_win.bat.  The results will be in the <literal>output</literal> directory.</simpara>
+</chapter>
+<chapter id="_structure">
+<title>Structure</title>
 <simpara>Library content consists of prose and “chunks”. Using inclusion, prose is
 intermixed with topical “chunks” to ultimately create a book or wiki. Books
 tend to take a linear approach to a topic, adding extra information to core
@@ -163,6 +203,5 @@ filenames to indicate content; avoid redundancy w/directory “chunk” category
 </itemizedlist>
 </listitem>
 </itemizedlist>
-</section>
 </chapter>
 </book>

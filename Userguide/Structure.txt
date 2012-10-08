@@ -1,5 +1,5 @@
-LIBRARY STRUCTURE
-=================
+Structure
+=========
 
 Library content consists of prose and “chunks”. Using inclusion, prose is
 intermixed with topical “chunks” to ultimately create a book or wiki. Books
