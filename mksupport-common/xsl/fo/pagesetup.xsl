@@ -118,10 +118,10 @@
 		<fo:simple-page-master page-height="{$page.height}" page-width="{$page.width}" master-name="fullpage">
 			<xsl:choose>
 				<xsl:when test="$draft.mode='yes'">
-					<fo:region-body background-color="lightgrey" margin="0in"/>
+					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/msli-honeycomb-background-draft.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
 				</xsl:when>
 				<xsl:otherwise>
-					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/cover-background.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
+					<fo:region-body background-image="{$DOCTOOLS}/mksupport-common/images/msli-honeycomb-background-release.svg" background-position-vertical="1.75in" background-repeat="no-repeat" margin="0in" overflow="visible"/>
 				</xsl:otherwise>
 			</xsl:choose>
 		</fo:simple-page-master>

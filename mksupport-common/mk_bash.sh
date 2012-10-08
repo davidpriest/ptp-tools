@@ -1,6 +1,6 @@
 #!/bin/bash
-#DOCUMENT=_ReleaseNotes.txt
-#export DOCTOOLS=$PWD/../../tools
+#DOCUMENT=_RootDocName.txt
+#export DOCTOOLS=$PWD/../ptp-tools
 
 # The values above are set in the source directory's mk_bash.sh stub
 # Configure values above; do not modify below this line

@@ -10,7 +10,7 @@
   a machine by machine basis.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-<xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
+  <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/epub/docbook.xsl"/>
   <xsl:import href="html/common-html.xsl"/>
   <!--
 DocBook XSL 1.75.2: Nav headers are invalid XHTML (table width element).
