@@ -1,0 +1,7 @@
+Plain Text Publishing
+=====================
+:xshowcomments:
+
+== Welcome to Plain Text Publishing
+
+This is the root document for your next great work.
