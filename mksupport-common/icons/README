@@ -1,5 +1,4 @@
-Replaced the plain DocBook XSL admonition icons with Jimmac's DocBook
-icons (http://jimmac.musichall.cz/ikony.php3). I dropped transparency
-from the Jimmac icons to get round MS IE and FOP PNG incompatibilies.
+Replaced several stock Docbook icons with adaptations from 
+http://www.unlogic.se/projects/openicons
 
-Stuart Rackham
+See http://www.unlogic.se/blogs/myblog/post/openicons for details.
