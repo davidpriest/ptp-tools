@@ -68,6 +68,12 @@ break -->
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+  <xsl:template match="simpara[child::indexterm[not(preceding-sibling::*) and not(following-sibling::*)]]">
+		<!-- deal with awkward inclusion of non-inline
+"inline" index terms ... ie. on their own line, separated by blank lines above
+and below -->
+    <xsl:apply-templates/>
+  </xsl:template>
   <xsl:template match="para[@role='review'][preceding::processing-instruction('asciidoc-draft')]">
     <fo:block color="red">
       <xsl:apply-templates/>
