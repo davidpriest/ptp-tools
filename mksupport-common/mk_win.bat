@@ -31,6 +31,6 @@ echo Transforming to XHTML
 md output\xhtml
 a2x.py -f xhtml --xsl-file=mksupport\xsl\xhtml.xsl --destination-dir=output\xhtml %cmdrest%
 
-echo Transforming to HTMLHelp/CHM
-md output\chm
-a2x.py -f htmlhelp --stylesheet="docbook-xsl.css mksupport/custom.css" --destination-dir=output\chm %cmdrest%
+REM echo Transforming to HTMLHelp/CHM
+REM md output\chm
+REM a2x.py -f htmlhelp --stylesheet="docbook-xsl.css mksupport/custom.css" --destination-dir=output\chm %cmdrest%

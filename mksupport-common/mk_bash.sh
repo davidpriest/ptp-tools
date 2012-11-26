@@ -30,6 +30,6 @@ echo "Transforming to XHTML"
 mkdir -p output/html
 a2x.py -f xhtml --xsl-file=mksupport/xsl/xhtml.xsl --destination-dir=output/html $cmdrest
 
-echo "Transforming to HTMLHelp/CHM"
-mkdir -p output/chm
-a2x.py -f htmlhelp --stylesheet="docbook-xsl.css mksupport/custom.css" --destination-dir=output/chm $cmdrest
+#echo "Transforming to HTMLHelp/CHM"
+#mkdir -p output/chm
+#a2x.py -f htmlhelp --stylesheet="docbook-xsl.css mksupport/custom.css" --destination-dir=output/chm $cmdrest
