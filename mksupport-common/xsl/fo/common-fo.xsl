@@ -14,6 +14,7 @@
   <xsl:param name="cover.subtitle" select="//cover/para[@xml:id='cover_subtitle']"/>
   <xsl:param name="cover.title" select="//cover/para[@xml:id='cover_title']"/>
   <xsl:param name="cover.version" select="//cover/para[@xml:id='cover_version']"/>
+  <xsl:param name="cover.graphic.default.extension">svg</xsl:param>
   <xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/mir-logo.svg')"/>
   <xsl:param name="logo.width">3.5pc</xsl:param>
   <xsl:param name="narrow.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
@@ -30,6 +31,7 @@
   <xsl:param name="draft.mode">
     <xsl:choose>
       <xsl:when test="processing-instruction('asciidoc-draft')">yes</xsl:when>
+      <xsl:when test="/*[@status='draft']">yes</xsl:when>
       <xsl:otherwise>no</xsl:otherwise>
     </xsl:choose>
   </xsl:param>
@@ -48,6 +50,7 @@
   <xsl:param name="hyphenate">false</xsl:param>
   <xsl:param name="line-height" select="1.2"/>
   <xsl:param name="monospace.font.family" select="'monospace,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="paper.type" select="'USletter'"/>
   <xsl:param name="sans.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="section.autolabel">1</xsl:param>
   <xsl:param name="section.autolabel.max.depth">3</xsl:param>
