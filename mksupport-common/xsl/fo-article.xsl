@@ -19,4 +19,5 @@
   <xsl:import href="fo/pagesetup.xsl"/>
   <xsl:import href="fo/titlepages.templates.xsl"/>
   <xsl:import href="fo/titles.xsl"/>
+  <xsl:import href="fo/diff.xsl"/>
 </xsl:stylesheet>
