@@ -14,8 +14,11 @@ Configuration
 
 When publishing documents that have been configured to use this toolset, you
 must edit the publishing command for that document. Using a plain text editor,
-modify `mk_bash.sh` (OS X, Linux) and/or `mk_win.bat` (Windows). On line two,
-modify the `DOCTOOLS` path value to point to the toolset directory.
+modify `mk_bash.sh` (OS X, Linux) and/or `mk_win.bat` (Windows):
+
+* On the second line of the file, change the **source** or **CALL** path to
+  point to the tools repository. This may be an absolute or relative path.
+
 
 The `_TEMPLATE` directory provides a template for new documents. It may be
 copied to a directory of your choice. As described in the previous paragraph,
@@ -55,7 +58,9 @@ Imported *after* `mksupport-common/asciidoc.conf` and
 file (`fop.conf`) can also refer to fonts found on your system or in other
 directories.
 
-`fop.conf`: Configuration file for FOP, the PDF engine.
+`fop.conf`: Configuration file for FOP, the PDF engine. The base and base-font
+elements are modified by the `init.sh` or `init.bat` command when a document
+is published.
 
 `icons/`: Replacement icons for callouts and annotations used in the Docbook
 transformation.
@@ -63,8 +68,8 @@ transformation.
 `images/`: Contains MANDIANT logos and banners.
 
 `mk_bash.sh`, `mk_win.bat`: The scripts that drive the default publishing
-process. These are called by the publication scripts packaged with documents
-that use this publishing toolchain.
+process. These are typically called by the publication scripts packaged with
+documents that use this publishing toolchain.
 
 `xsl/`: Contains custom Docbook XSL parameters and templates, providing
 consistent MANDIANT visual style and structure to documents. These add to and
@@ -79,22 +84,14 @@ support for the document contents. See Configuration, above, to use the
 toolset with a document package.
 
 The tools can also be called independently. When doing so, several environment
-variables must be configured before calling the tool:
-
-`DOCTOOLS`: the path to the toolset root directory.
-
-`PATH`: paths to the tools in the toolset root directory
-
-`XML_CATALOG_FILES`: path to the XML catalog used by the toolset, used to
-convert Docbook URIs to local file references.
+variables must be configured before calling the tool by sourcing the `init.sh`
+(Bash) or calling the `init.bat` (Windows) file.
 
 Here is an example where an existing Docbook XML file is transformed to PDF and HTML:
 
     #!/bin/bash
     # Configure essential environment variables
-    export DOCTOOLS=$PWD/../tools
-    export PATH=$DOCTOOLS/xmlsh/unix:$DOCTOOLS/fop:$PATH
-    export XML_CATALOG_FILES=$DOCTOOLS/CATALOG.XML
+    source ../tools/init.sh
 
     filename=${1%.xml} # remove extension
 

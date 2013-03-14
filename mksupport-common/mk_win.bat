@@ -10,7 +10,7 @@ SETLOCAL
 set DOCUMENT=%1
 set EXTRA=%2 %3 %4 %5 %6 %7 %8 %9
 
-IF %DOCTOOLS%=="" CALL ..\init.bat
+IF "%DOCTOOLS%"=="" CALL ..\init.bat
 
 rd /q /s %CD%\output
 md %CD%\output
