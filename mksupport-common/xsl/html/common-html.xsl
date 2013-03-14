@@ -8,6 +8,7 @@
 <xsl:param name="html.stylesheet" select="'docbook-xsl.css'"/>
 
 <xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
+<xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
 
 <xsl:param name="htmlhelp.chm" select="'htmlhelp.chm'"/>
 <xsl:param name="htmlhelp.hhc.section.depth" select="5"/>

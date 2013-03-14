@@ -13,9 +13,9 @@
   <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl"/>
   <xsl:import href="html/common-html.xsl"/>
 
-  <xsl:param name="navig.graphics.path">images/icons/</xsl:param>
-  <xsl:param name="admon.graphics.path">images/icons/</xsl:param>
-  <xsl:param name="callout.graphics.path" select="'images/icons/callouts/'"/>
+  <xsl:param name="navig.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
+  <xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
+  <xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
 
   <xsl:template match="para[@role='review']">
     <div class="review">

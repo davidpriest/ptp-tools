@@ -1,9 +1,5 @@
 #!/bin/bash
-export DOCTOOLS=$PWD/../tools
-export PATH=$DOCTOOLS/asciidoc:$DOCTOOLS/fop:$PATH
-export XML_CATALOG_FILES=$DOCTOOLS/CATALOG.XML
-
-
+[ -z "$DOCTOOLS" ] && source ../init.sh
 
 java -cp $DOCTOOLS/diffmk/bin/diffmk.jar net.sf.diffmk.DiffMk --ignorewhitespace "$1" "$2" "output/DIFF.xml"
 

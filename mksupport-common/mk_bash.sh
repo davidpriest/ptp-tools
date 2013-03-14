@@ -8,9 +8,8 @@
 DOCUMENT=$1
 shift
 EXTRA=$*
-export XML_CATALOG_FILES=$DOCTOOLS/CATALOG.XML
-export XML_DEBUG_CATALOG=1
-export PATH=$DOCTOOLS/fop:$DOCTOOLS/asciidoc:$PATH
+
+[ -z "$DOCTOOLS" ] && source ../init.sh
 
 mkdir -p output
 rm -rf output/*
