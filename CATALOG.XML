@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+	<public publicId="-//OASIS//DTD DocBook XML V4.5//EN" uri="./docbook-xml-4.5/docbookx.dtd"/>
 	<rewriteSystem systemIdStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport-common"/>
 	<rewriteURI uriStartString="http://davidpriest.ca/mksupport" rewritePrefix="./mksupport-common"/>
 	<nextCatalog catalog="./docbook-xsl/catalog.xml"/>
+	<nextCatalog catalog="./docbook-xml-4.5/catalog.xml"/>
 </catalog>
