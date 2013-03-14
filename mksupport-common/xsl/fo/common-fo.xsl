@@ -36,7 +36,7 @@
 	<xsl:param name="admon.graphics.extension" select="'.svg'"/>
 	<xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
 	<xsl:param name="alignment">left</xsl:param>
-  <xsl:param name="body.font.family" select="'serif,Symbol,ZapfDingbats,Unicode'"/>
+  <xsl:param name="body.font.family" select="'PTSans-Regular,serif,Symbol,ZapfDingbats,Unicode'"/>
 	<xsl:param name="body.font.master">10.5</xsl:param>
 	<xsl:param name="callout.defaultcolumn" select="'80'"/>
 	<xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
@@ -47,7 +47,7 @@
 	<xsl:param name="hyphenate">false</xsl:param>
 	<xsl:param name="line-height" select="1.2"/>
   <xsl:param name="monospace.font.family" select="'monospace,Symbol,ZapfDingbats,Unicode'"/>
-  <xsl:param name="sans.font.family" select="'sans-serif,Symbol,ZapfDingbats,Unicode'"/>
+  <xsl:param name="sans.font.family" select="'Paratype,sans-serif,Symbol,ZapfDingbats,Unicode'"/>
   <xsl:param name="section.autolabel">1</xsl:param>
 	<xsl:param name="section.autolabel.max.depth">3</xsl:param>
 	<xsl:param name="section.label.includes.component.label">1</xsl:param>

@@ -23,7 +23,7 @@
 <!--   %t is the current element's title -->
 <!--   %s is the current element's subtitle (if applicable)-->
 <!--   %n is the current element's number label-->
-<!--   %p is the current element's page number (if applicable)-->
+<!--   %px is the current element's page number (if applicable)-->
 <!-- ******************************************************************** -->
 
 
