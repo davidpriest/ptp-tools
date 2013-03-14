@@ -6,24 +6,18 @@ Linux, and Windows platforms.
 
 The toolset accepts ASCIIDoc text files and transforms them to PDF, HTML, ePub
 and other formats, applying MANDIANT style and layout to the contents. It may
-also be used, with more effort, to transform XML to Docbook XML, which can in
-turn be transformed to PDF, HTML, ePub and so on.
+also be used, with little more effort, to transform XML to Docbook XML, which
+can in turn be transformed to PDF, HTML, ePub and so on.
 
 Configuration
 =============
-
-After cloning the repository to a directory, use a plain text editor to update
-`mksupport-common/fop.bash.conf` (OS X, Linux) and/or
-`mksupport-common/fop.win.conf` (Windows). On line four, set the `font-base`
-path value to point to the root of the toolset directory. This must be an
-absolute path.
 
 When publishing documents that have been configured to use this toolset, you
 must edit the publishing command for that document. Using a plain text editor,
 modify `mk_bash.sh` (OS X, Linux) and/or `mk_win.bat` (Windows). On line two,
 modify the `DOCTOOLS` path value to point to the toolset directory.
 
-The `Userguide` directory provides a template for new documents. It may be
+The `_TEMPLATE` directory provides a template for new documents. It may be
 copied to a directory of your choice. As described in the previous paragraph,
 modify the publishing commands to point to the toolset directory. This can be
 a relative or absolute path. If you rename the root document, you must also
@@ -49,21 +43,21 @@ provided by the stock ASCIIDoc, Docbook XSL, and FOP tools:
 `a2x.bash.conf`, `a2x.win.conf`: Configuration files for the ASCIIDoc `a2x`
 tool.
 
+`asciidoc.conf`: An ASCIIDoc configuration file. Imported *before*
+`[doc]/mksupport/asciidoc.conf`.
+
 `asciidoc-replacements.conf`: An ASCIIDoc configuration file. Contains
 replacements for product names &c, ensuring they use consistent spelling.
 Imported *after* `mksupport-common/asciidoc.conf` and
 `[doc]/mksupport/asciidoc.conf`.
 
-`asciidoc.conf`: An ASCIIDoc configuration file. Imported *before*
-`[doc]/mksupport/asciidoc.conf`.
-
 `fonts/`: Contains font files used in PDF production. The FOP configuration
-files (`fop.*.conf`) can also refer to fonts found on your system or in other
+file (`fop.conf`) can also refer to fonts found on your system or in other
 directories.
 
-`fop.bash.conf`, `fop.win.conf`: Configuration files for FOP, the PDF engine.
+`fop.conf`: Configuration file for FOP, the PDF engine.
 
-`icons/`: Replacement icons for callouts and annotations, used in the Docbook
+`icons/`: Replacement icons for callouts and annotations used in the Docbook
 transformation.
 
 `images/`: Contains MANDIANT logos and banners.
