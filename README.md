@@ -12,13 +12,10 @@ can in turn be transformed to PDF, HTML, ePub and so on.
 Configuration
 =============
 
-When publishing documents that have been configured to use this toolset, you
-must edit the publishing command for that document. Using a plain text editor,
-modify `mk_bash.sh` (OS X, Linux) and/or `mk_win.bat` (Windows):
-
-* On the second line of the file, change the **source** or **CALL** path to
-  point to the tools repository. This may be an absolute or relative path.
-
+When publishing documents that have been configured to use this toolset,
+`mk_bash.sh` (OS X, Linux) and/or `mk_win.bat` (Windows) will first make a
+call to `init.sh` or `init.bat`. To ensure that the initialization file can
+be found, clone the repository as a sibling to the publication directory.
 
 The `_TEMPLATE` directory provides a template for new documents. It may be
 copied to a directory of your choice. As described in the previous paragraph,
@@ -91,8 +88,17 @@ Here is an example where an existing Docbook XML file is transformed to PDF and 
 
     #!/bin/bash
     # Configure essential environment variables
-    source ../tools/init.sh
-
+    if [ -n "$DOCTOOLS" ] ; then
+      source $DOCTOOLS/init.sh
+    elif [ -e "../tools/init.sh" ] ; then
+      source ../tools/init.sh
+    elif [ -e "./tools/init.sh" ] ; then
+      source ./tools/init.sh
+    else
+      echo "Unable to find publishing tools 'init.sh'" >&2
+      exit 1
+    fi
+    
     filename=${1%.xml} # remove extension
 
     # transform from Docbook XML to pre-PDF XML:FO
