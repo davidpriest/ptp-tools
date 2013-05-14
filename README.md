@@ -5,7 +5,7 @@ This repository contains a multi-platform publishing toolset, supporting OS X,
 Linux, and Windows platforms.
 
 The toolset accepts ASCIIDoc text files and transforms them to PDF, HTML, ePub
-and other formats, applying MANDIANT style and layout to the contents. It may
+and other formats, applying corporate style and layout to the contents. It may
 also be used, with little more effort, to transform XML to Docbook XML, which
 can in turn be transformed to PDF, HTML, ePub and so on.
 
@@ -29,7 +29,7 @@ modify the `DOCUMENT` name on line three.
 Customization
 =============
 
-The toolset is preconfigured to provide standard MANDIANT visual style to
+The toolset is preconfigured to provide standard corporate visual style to
 documents. Changes that are unique to an individual document should be
 performed in that document package, not to the toolset.
 
@@ -65,14 +65,14 @@ is published.
 `icons/`: Replacement icons for callouts and annotations used in the Docbook
 transformation.
 
-`images/`: Contains MANDIANT logos and banners.
+`images/`: Contains corporate logos and banners.
 
 `mk_bash.sh`, `mk_win.bat`: The scripts that drive the default publishing
 process. These are typically called by the publication scripts packaged with
 documents that use this publishing toolchain.
 
 `xsl/`: Contains custom Docbook XSL parameters and templates, providing
-consistent MANDIANT visual style and structure to documents. These add to and
+consistent corporate visual style and structure to documents. These add to and
 override the default `docbook-xsl` transformations found in `docbook-xsl`,
 located in the toolset directory.
 
