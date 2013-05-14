@@ -48,7 +48,7 @@
               <fo:table-row block-progression-dimension="96pt">
                 <fo:table-cell display-align="after">
                   <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="9pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols">
-                    <xsl:text>Please visit our forums at https://forums.mandiant.com/</xsl:text>
+                    <xsl:text>Please visit us!</xsl:text>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>

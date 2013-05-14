@@ -1,8 +1,52 @@
 Plain Text Publishing User Guide
 ================================
-:xshowcomments:
+:author: David Priest
+:email: ptp-tools@davidpriest.ca
+:revdate: 2013-03-16
 
 == Welcome to Plain Text Publishing
+
+The PTP package combines a plain text markup translator with a
+industry-standard open-source publishing toolset that generates PDF, XHTML,
+and ePub editions of the source plaintext. Pre-publication transformation and
+publication layout and style are fully customizable, supporting both a
+corporate standard style and customizations of that style for each document.
+
+The PTP toolset comprises:
+
+* ASCIIDoc, a plain text markup processing system.
+
+* Docbook XML and the Stayton XSL:FO transformations.
+
+* Apache FOP, an XSL:FO to PDF rendering engine.
+
+* ptp-tools/mksupport-common, a set of Bash and Windows scripts guiding the
+  transformation pipeline.
+
+* xsltproc, an XSLT interpreter (needed by Windows platforms).
+
+* XMLSh, a POSIX-flavoured "Bash plus XML" scripting interpreter.
+
+The PTP toolset requires installation of:
+
+* Python.
+
+* Java.
+
+
+== Publication Structure
+
+Each publication is maintained in a separate directory containing the source
+text, source images, configuration and transformation customizations, and a
+publication script.
+
+The publication script (`mk_bash.sh` or `mk_win.bat`) attempts to find the
+publication tools in either a sibling directory or subdirectory of the
+publication directory. 
+
+The tools are expected to be in a directory named `ptp-tools`.  If you 
+cloned to a different directory, you will need to set the DOCTOOLS 
+environment variable or modify your `mk_bash.sh` or `mk_win.bat` file.
 
 :leveloffset: 2
 include::ABOUT.txt[]

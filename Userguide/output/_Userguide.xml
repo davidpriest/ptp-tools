@@ -5,11 +5,15 @@
 
 <book lang="en">
 <bookinfo>
-<cover>
-<para xml:id='asciidoc_sku'>missing SKU</para>
-<para xml:id='asciidoc_release'>missing Release</para>
-</cover>
     <title>Plain Text Publishing User Guide</title>
+    <date>2013-03-16</date>
+    <author>
+        <firstname>David</firstname>
+        <surname>Priest</surname>
+        <email>ptp-tools@davidpriest.ca</email>
+    </author>
+    <authorinitials>DP</authorinitials>
+<revhistory><revision><date>2013-03-16</date><authorinitials>DP</authorinitials></revision></revhistory>
 <cover>
         <para xml:id="brand">Product Brand Name</para>
         <para xml:id="docinfo_sku">product sku</para>
@@ -43,6 +47,70 @@
 </bookinfo>
 <chapter id="_welcome_to_plain_text_publishing">
 <title>Welcome to Plain Text Publishing</title>
+<simpara>The PTP package combines a plain text markup translator with a
+industry-standard open-source publishing toolset that generates PDF, XHTML,
+and ePub editions of the source plaintext. Pre-publication transformation and
+publication layout and style are fully customizable, supporting both a
+corporate standard style and customizations of that style for each document.</simpara>
+<simpara>The PTP toolset comprises:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+ASCIIDoc, a plain text markup processing system.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Docbook XML and the Stayton XSL:FO transformations.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Apache FOP, an XSL:FO to PDF rendering engine.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+ptp-tools/mksupport-common, a set of Bash and Windows scripts guiding the
+  transformation pipeline.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+xsltproc, an XSLT interpreter (needed by Windows platforms).
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+XMLSh, a POSIX-flavoured "Bash plus XML" scripting interpreter.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>The PTP toolset requires installation of:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Python.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Java.
+</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+<chapter id="_publication_structure">
+<title>Publication Structure</title>
+<simpara>Each publication is maintained in a separate directory containing the source
+text, source images, configuration and transformation customizations, and a
+publication script.</simpara>
+<simpara>The publication script (<literal>mk_bash.sh</literal> or <literal>mk_win.bat</literal>) attempts to find the
+publication tools in either a sibling directory or subdirectory of the
+publication directory.</simpara>
+<simpara>The tools are expected to be in a directory named <literal>ptp-tools</literal>.  If you
+cloned to a different directory, you will need to set the DOCTOOLS
+environment variable or modify your <literal>mk_bash.sh</literal> or <literal>mk_win.bat</literal> file.</simpara>
 <section id="_library_structure">
 <title>LIBRARY STRUCTURE</title>
 <simpara>Library content consists of prose and “chunks”. Using inclusion, prose is
