@@ -17,3 +17,4 @@ tracking system.
 # Publishing
 
 Install the ptp-tools package.
+Run the `publish.sh` (OS X, Linux) or `publish.bat` (Windows) command.

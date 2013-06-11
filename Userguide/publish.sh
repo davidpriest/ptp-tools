@@ -1,9 +1,11 @@
 #!/bin/bash
 DOCUMENT=_Userguide.txt
-DOCTOOLS=..
 
-if [ -n "$DOCTOOLS" ] ; then
-  source $DOCTOOLS/init.sh
+# Set PTP_TOOLS explicitly, because the User Guide lives inside the repo.
+PTP_TOOLS=..
+
+if [ -n "$PTP_TOOLS" ] ; then
+  source $PTP_TOOLS/init.sh
 elif [ -e "../ptp-tools/init.sh" ] ; then
   source ../ptp-tools/init.sh
 elif [ -e "./ptp-tools/init.sh" ] ; then
@@ -13,4 +15,4 @@ else
   exit 1
 fi
 
-$DOCTOOLS/mksupport-common/mk_bash.sh $DOCUMENT -d book
+$PTP_TOOLS/ptp-site-defaults/publish.sh $DOCUMENT -d book

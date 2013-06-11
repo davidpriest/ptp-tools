@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <fop version="1.0">
-  <base>./mksupport-common/</base>
-  <font-base>./mksupport-common/fonts/</font-base>
+  <base>./ptp-site-defaults/</base>
+  <font-base>./ptp-site-defaults/fonts/</font-base>
   <strict-configuration>true</strict-configuration>
   <source-resolution>72</source-resolution>
   <target-resolution>72</target-resolution>

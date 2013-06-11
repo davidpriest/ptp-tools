@@ -20,7 +20,7 @@ The PTP toolset comprises:
 
 * Apache FOP, an XSL:FO to PDF rendering engine.
 
-* ptp-tools/mksupport-common, a set of Bash and Windows scripts guiding the
+* ptp-tools/ptp-site-defaults, a set of Bash and Windows scripts guiding the
   transformation pipeline.
 
 * xsltproc, an XSLT interpreter (needed by Windows platforms).
@@ -40,13 +40,13 @@ Each publication is maintained in a separate directory containing the source
 text, source images, configuration and transformation customizations, and a
 publication script.
 
-The publication script (`mk_bash.sh` or `mk_win.bat`) attempts to find the
+The publication script (`publish.sh` or `publish.bat`) attempts to find the
 publication tools in either a sibling directory or subdirectory of the
 publication directory. 
 
 The tools are expected to be in a directory named `ptp-tools`.  If you 
-cloned to a different directory, you will need to set the DOCTOOLS 
-environment variable or modify your `mk_bash.sh` or `mk_win.bat` file.
+cloned to a different directory, you will need to set the PTP_TOOLS 
+environment variable or modify your `publish.sh` or `publish.bat` file.
 
 :leveloffset: 2
 include::ABOUT.txt[]

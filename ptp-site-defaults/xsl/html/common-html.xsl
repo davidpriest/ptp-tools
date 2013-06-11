@@ -7,8 +7,9 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 <xsl:param name="html.stylesheet" select="'docbook-xsl.css'"/>
 
-<xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
-<xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
+<xsl:param name="navig.graphics.path">icons/</xsl:param>
+<xsl:param name="admon.graphics.path">icons/</xsl:param>
+<xsl:param name="callout.graphics.path">icons/callouts/</xsl:param>
 
 <xsl:param name="htmlhelp.chm" select="'htmlhelp.chm'"/>
 <xsl:param name="htmlhelp.hhc.section.depth" select="5"/>
@@ -23,7 +24,6 @@
 <xsl:param name="suppress.navigation" select="0"/>
 <xsl:param name="navig.graphics.extension" select="'.png'"/>
 <xsl:param name="navig.graphics" select="0"/>
-<xsl:param name="navig.graphics.path">concat('file://',$DOCTOOLS,'/mksupport-common/icons/')</xsl:param>
 <xsl:param name="navig.showtitles">0</xsl:param>
 
 <xsl:param name="admon.style">

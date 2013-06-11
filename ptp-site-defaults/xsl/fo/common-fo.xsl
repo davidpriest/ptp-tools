@@ -3,9 +3,9 @@
   See xsl-stylesheets/fo/param.xsl for all parameters.
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
-  <xsl:param name="DOCTOOLS" select="'MUST PASS DOCTOOLS TO XSLTPROC!'"/>
+  <xsl:param name="PTP_TOOLS" select="'MUST PASS PTP_TOOLS TO XSLTPROC!'"/>
   <!-- Particular to customizations -->
-  <xsl:param name="banner" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/mir-banner.svg')"/>
+  <xsl:param name="banner" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/mir-banner.svg')"/>
   <xsl:param name="bookinfo.title" select="//bookinfo/title/text()"/>
   <xsl:param name="cover.copyright" select="//cover/para[@xml:id='cover_copyright']"/>
   <xsl:param name="cover.date" select="//cover/para[@xml:id='cover_date']"/>
@@ -15,7 +15,7 @@
   <xsl:param name="cover.title" select="//cover/para[@xml:id='cover_title']"/>
   <xsl:param name="cover.version" select="//cover/para[@xml:id='cover_version']"/>
   <xsl:param name="cover.graphic.default.extension">svg</xsl:param>
-  <xsl:param name="logo" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/mir-logo.svg')"/>
+  <xsl:param name="logo" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/mir-logo.svg')"/>
   <xsl:param name="logo.width">3.5pc</xsl:param>
   <xsl:param name="narrow.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="pantone202.primary.red">rgb(130,36,51)</xsl:param>
@@ -37,14 +37,14 @@
   </xsl:param>
   <xsl:param name="admon.graphics" select="1"/>
   <xsl:param name="admon.graphics.extension" select="'.svg'"/>
-  <xsl:param name="admon.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/')"/>
+  <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/')"/>
   <xsl:param name="alignment">left</xsl:param>
   <xsl:param name="body.font.family" select="'PTSans-Regular,serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="body.font.master">10.5</xsl:param>
   <xsl:param name="callout.defaultcolumn" select="'80'"/>
-  <xsl:param name="callout.graphics.path" select="concat('file://',$DOCTOOLS,'/mksupport-common/icons/callouts/')"/>
+  <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/callouts/')"/>
   <xsl:param name="dingbat.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="draft.watermark.image" select="concat('file://',$DOCTOOLS,'/mksupport-common/images/draft.png')"/>
+  <xsl:param name="draft.watermark.image" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/draft.png')"/>
   <xsl:param name="fop1.extensions" select="1"/>
   <xsl:param name="header.column.widths">2 1 1</xsl:param>
   <xsl:param name="hyphenate">false</xsl:param>
