@@ -4,13 +4,13 @@
   <xsl:template match="base">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
-      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp-site-defaults/</xsl:text>
+      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp/</xsl:text>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="font-base">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
-      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp-site-defaults/fonts/</xsl:text>
+      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp/fonts/</xsl:text>
     </xsl:copy>
   </xsl:template>
   <xsl:template match="@*|node()">

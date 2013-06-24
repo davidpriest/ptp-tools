@@ -38,7 +38,7 @@ used in converting ASCIIDoc to Docbook XML; refer to the ASCIIDoc literature
 for usage details. The `xsl/` directory provides DocBook-to-X customization;
 refer to Bob Stayton's “DocBook XSL: The Complete Guide” for details.
 
-The toolset has `ptp-site-defaults` directory, containing configuration and
+The toolset has `ptp` directory, containing configuration and
 support files that supplement or override settings and transformations
 provided by the stock ASCIIDoc, Docbook XSL, and FOP tools:
 
@@ -50,7 +50,7 @@ tool.
 
 `asciidoc-replacements.conf`: An ASCIIDoc configuration file. Contains
 replacements for product names &c, ensuring they use consistent spelling.
-Imported *after* `ptp-site-defaults/asciidoc.conf` and
+Imported *after* `ptp/asciidoc.conf` and
 `[doc]/ptp-config/asciidoc.conf`.
 
 `fonts/`: Contains font files used in PDF production. The FOP configuration
@@ -108,7 +108,7 @@ Here is an example where an existing Docbook XML file is transformed to PDF and 
     $filename.fo ptp-config/xsl/fo-article.xsl $filename.xml
 
     # transform from XML:FO to PDF
-    fop -c $PTP_TOOLS/ptp-site-defaults/fop.bash.conf -fo $filename.fo -pdf \
+    fop -c $PTP_TOOLS/ptp/fop.bash.conf -fo $filename.fo -pdf \
     $filename.pdf
 
     # transform from XML:FO to XHTML
