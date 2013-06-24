@@ -37,14 +37,14 @@
   </xsl:param>
   <xsl:param name="admon.graphics" select="1"/>
   <xsl:param name="admon.graphics.extension" select="'.svg'"/>
-  <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/')"/>
+  <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
   <xsl:param name="alignment">left</xsl:param>
   <xsl:param name="body.font.family" select="'PTSans-Regular,serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="body.font.master">10.5</xsl:param>
   <xsl:param name="callout.defaultcolumn" select="'80'"/>
-  <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/callouts/')"/>
+  <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/callouts/')"/>
   <xsl:param name="dingbat.font.family" select="'sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="draft.watermark.image" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/draft.png')"/>
+  <xsl:param name="draft.watermark.image" select="concat('file://',$PTP_TOOLS,'/ptp/images/draft.png')"/>
   <xsl:param name="fop1.extensions" select="1"/>
   <xsl:param name="header.column.widths">2 1 1</xsl:param>
   <xsl:param name="hyphenate">false</xsl:param>

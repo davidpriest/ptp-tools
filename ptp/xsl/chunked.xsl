@@ -13,9 +13,9 @@
   <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl"/>
   <xsl:import href="html/common-html.xsl"/>
 
-  <xsl:param name="navig.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/')"/>
-  <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/')"/>
-  <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/icons/callouts/')"/>
+  <xsl:param name="navig.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
+  <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
+  <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/callouts/')"/>
 
   <xsl:template match="para[@role='review']">
     <div class="review">
