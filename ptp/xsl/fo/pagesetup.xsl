@@ -123,9 +123,9 @@
           <fo:region-after background-color="lightgrey" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
         </xsl:when>
         <xsl:otherwise>
-          <fo:region-body background-color="{$pantone202.primary.red}" margin-bottom="0in" margin-top="0in" margin-left="0in" margin-right="0in"/>
-          <fo:region-before background-color="{$pantone202.primary.red}" extent="0pt" display-align="after" region-name="xsl-region-before-first"/>
-          <fo:region-after background-color="{$pantone202.primary.red}" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
+          <fo:region-body background-color="{$primary.red}" margin-bottom="0in" margin-top="0in" margin-left="0in" margin-right="0in"/>
+          <fo:region-before background-color="{$primary.red}" extent="0pt" display-align="after" region-name="xsl-region-before-first"/>
+          <fo:region-after background-color="{$primary.red}" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
         </xsl:otherwise>
       </xsl:choose>
     </fo:simple-page-master>

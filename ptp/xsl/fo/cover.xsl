@@ -14,21 +14,21 @@
             <fo:table-body>
               <fo:table-row block-progression-dimension="78pt">
                 <fo:table-cell display-align="after">
-                  <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="24pt" font-family="PTSans-Caption,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
-                    <xsl:apply-templates select="$cover.title"/>
+                  <fo:block margin-left="2.25in" color="{$primary.grey}" font-size="24pt" font-family="PTSans-Caption,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
+                    <xsl:apply-templates select="$ptp.cover.title"/>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>
               <fo:table-row block-progression-dimension="36pt">
                 <fo:table-cell display-align="after">
-                  <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="24pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
+                  <fo:block margin-left="2.25in" color="{$primary.grey}" font-size="24pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
                     <xsl:apply-templates select="$cover.subtitle"/>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>
               <fo:table-row block-progression-dimension="36pt">
                 <fo:table-cell display-align="after">
-                  <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="14pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols">
+                  <fo:block margin-left="2.25in" color="{$primary.grey}" font-size="14pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols">
                     <xsl:if test="$release.name">
                       <xsl:value-of select="$release.name"/>
                     </xsl:if>
@@ -40,14 +40,14 @@
               </fo:table-row>
               <fo:table-row block-progression-dimension="18pt">
                 <fo:table-cell display-align="after">
-                  <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="14pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
+                  <fo:block margin-left="2.25in" color="{$primary.grey}" font-size="14pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold">
                     <xsl:apply-templates select="$cover.date"/>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>
               <fo:table-row block-progression-dimension="96pt">
                 <fo:table-cell display-align="after">
-                  <fo:block margin-left="2.25in" color="{$pantone430.primary.grey}" font-size="9pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols">
+                  <fo:block margin-left="2.25in" color="{$primary.grey}" font-size="9pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols">
                     <xsl:text>Please visit us!</xsl:text>
                   </fo:block>
                 </fo:table-cell>
@@ -75,21 +75,21 @@
             <fo:table-body>
               <fo:table-row block-progression-dimension="200pt">
                 <fo:table-cell display-align="after">
-                  <fo:block text-align="center" color="{$pantone202.primary.red}" font-size="14pt" font-family="PTSans-Caption,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold" letter-spacing="0.1em" text-transform="uppercase">
+                  <fo:block text-align="center" color="{$primary.red}" font-size="14pt" font-family="PTSans-Caption,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" font-weight="bold" letter-spacing="0.1em" text-transform="uppercase">
                     <xsl:apply-templates select="$cover.org"/>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>
               <fo:table-row block-progression-dimension="14pt">
                 <fo:table-cell display-align="after">
-                  <fo:block text-align="center" color="{$pantone202.primary.red}" font-size="10pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" letter-spacing="0.1em" text-transform="uppercase">
+                  <fo:block text-align="center" color="{$primary.red}" font-size="10pt" font-family="PTSans-Regular,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols" letter-spacing="0.1em" text-transform="uppercase">
                     <xsl:apply-templates select="$cover.orgurl"/>
                   </fo:block>
                 </fo:table-cell>
               </fo:table-row>
               <fo:table-row block-progression-dimension="40pt">
                 <fo:table-cell display-align="after">
-                  <fo:block text-align="center" color="{$pantone430.primary.grey}" font-size="8pt" font-family="PTSans-Regular,sans-serif">
+                  <fo:block text-align="center" color="{$primary.grey}" font-size="8pt" font-family="PTSans-Regular,sans-serif">
                     <xsl:apply-templates select="$cover.copyright"/>
                   </fo:block>
                 </fo:table-cell>

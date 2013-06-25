@@ -272,7 +272,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="preface" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::preface[1]" font-size="&hsize5;" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::preface[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
             <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
             <corpauthor/>
             <authorgroup/>
@@ -298,7 +298,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="chapter" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::chapter[1]" font-size="&hsize5;" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::chapter[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
             <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
             <corpauthor space-before="0.5em" space-after="0.5em" font-size="&hsize2;"/>
             <authorgroup space-before="0.5em" space-after="0.5em" font-size="&hsize2;"/>
@@ -324,7 +324,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="appendix" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::appendix[1]" font-size="&hsize5;" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::appendix[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
             <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
             <corpauthor/>
             <authorgroup/>
@@ -556,7 +556,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="glossary" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::glossary[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::glossary[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$primary.red}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -586,7 +586,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="index" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::index[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::index[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$primary.red}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -634,7 +634,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="colophon" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="chapappendix.title" margin-left="{$title.margin.left}" font-family="{$title.fontset}" param:node="ancestor-or-self::colophon[1]" font-size="&hsize5;" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:force="1" t:named-template="chapappendix.title" margin-left="{$title.margin.left}" font-family="{$title.fontset}" param:node="ancestor-or-self::colophon[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -690,7 +690,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="table.of.contents" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'TableofContents'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-family="{$title.fontset}" font-size="&hsize5;" font-weight="bold" color="{$pantone202.primary.red}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'TableofContents'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-family="{$title.fontset}" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>

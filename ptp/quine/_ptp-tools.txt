@@ -1,0 +1,282 @@
+= ptp-tools Master Quine
+David Priest <docs@davidpriest.ca>
+v1.0, Sat Jun 15 22:44:31 PDT 2013
+
+This document assembles a ptp-tools publishing toolset.
+
+== ptp-tools kickstarter
+
+Hmmm.
+
+[weave,kickstart.sh]
+----
+#bash/sh
+#Generate the Unix ptp-tools installer
+#
+
+shopt -s extglob
+if [ -e ./ptp/kickstart ] ; then
+  # Remove old tools
+  rm -r -- !(ptp*|kickstart.sh)
+  # Build scripts
+  cd ptp
+  ./weave.sh ./quine/_ptp-tools.txt
+  # Move to kickstart, make executable
+  cp output/*[!_ptp-tools.xml] kickstart
+  chmod u+x kickstart/*.sh
+  # return to ptp-tools directory, install installer
+  cd ..
+  cp ptp/kickstart/install.sh .
+  # replace old kickstarter
+  cp ptp/kickstart/kickstart.sh .
+else
+  echo "This does not appear to be the ptp-tools directory!"
+  echo "Destructive operation cancelled."
+fi
+----
+
+[weave,CATALOG.XML]
+----
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <public publicId="-//OASIS//DTD DocBook XML V4.5//EN" uri="./docbook-xml-4.5/docbookx.dtd"/>
+  <rewriteURI uriStartString="http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" rewritePrefix="./docbook-xml-4.5/docbookx.dtd"/>
+  <rewriteURI uriStartString="http://davidpriest.ca/ptp-tools" rewritePrefix="./ptp"/>
+  <nextCatalog catalog="./docbook-xml-4.5/catalog.xml"/>
+  <nextCatalog catalog="./docbook-xml-5.0/catalog.xml"/>
+  <nextCatalog catalog="./docbook-xsl/catalog.xml"/>
+</catalog>
+----
+
+[weave,init.sh]
+----
+#!/bin/bash
+export PTP_TOOLS="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export XMLSH=$PTP_TOOLS/xmlsh
+export PATH=$PTP_TOOLS/asciidoc:$PTP_TOOLS/fop:$PTP_TOOLS/xmlsh/unix:$PATH
+export XML_CATALOG_FILES=$PTP_TOOLS/CATALOG.XML
+export FOP_OPTS=-Djava.awt.headless=true 
+
+xsltproc --stringparam PTP_TOOLS $PTP_TOOLS $PTP_TOOLS/init-fop.xsl $PTP_TOOLS/ptp/fop.conf.template > $PTP_TOOLS/ptp/fop.bash.conf
+----
+
+[weave,init-fop.xsl]
+----
+<?xml version="1.0"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+  <xsl:param name="PTP_TOOLS"/>
+  <xsl:template match="base">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp/</xsl:text>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="font-base">
+    <xsl:copy>
+      <xsl:copy-of select="@*"/>
+      <xsl:value-of select="$PTP_TOOLS"/><xsl:text>/ptp/fonts/</xsl:text>
+    </xsl:copy>
+  </xsl:template>
+  <xsl:template match="@*|node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+</xsl:stylesheet>
+----
+
+== The Open-Source Tools: Unix Edition
+
+The Unix edition of ptp-tools requires the following software to be
+pre-installed:
+
+* Python
+* Java
+* Git
+* Mercurial
+
+The `install.sh` script will subsequently install the remaining required
+components.
+
+[weave,install.sh]
+----
+#bash/sh
+#Install ptp-tools and supporting software.
+
+«install_asciidoc»
+
+«install_docbook-xml»
+
+«install_docbook-xsl»
+
+«install_fop»
+
+«install_xmlsh»
+
+«install_xsltproc»
+
+«install_saxon»
+
+«install_diffmk»
+
+«install_ptp-tools»
+
+#Move some ptp resources to the root directory
+cp -R ptp/kickstart/* .
+----
+
+=== ASCIIDoc
+
+Installs ASCIIDoc, a plain-text to Docbook XML transformation tool. Its
+transformation engine is roughly regex and template-based.
+
+[weave,«install_asciidoc»]
+----
+#Download and install the ASCIIDoc toolset.
+echo "Installing ASCIIDoc"
+hg clone -b default -r 8.6.8 https://code.google.com/p/asciidoc/ asciidoc
+----
+
+=== Docbook-XML
+
+Installs DTDs for docbook 4.5 and docbook 5.
+
+[weave,«install_docbook-xml»]
+----
+#Download and install the Docbook 4.5 DTD
+echo "Installing Docbook 4.5 DTD"
+curl http://www.docbook.org/xml/4.5/docbook-xml-4.5.zip --output docbook-xml-4.5.zip
+unzip -o -q docbook-xml-4.5.zip -d docbook-xml-4.5
+rm docbook-xml-4.5.zip
+
+#Download and install the Docbook 5 Schemas
+echo "Downloading Docbook 5 Schemas"
+curl -O http://www.docbook.org/xml/5.0/docbook-5.0.zip
+unzip -o -q docbook-5.0.zip
+mv docbook-5.0 docbook-xml-5.0
+rm docbook-5.0.zip
+----
+
+=== Docbook-XSL
+
+Installs the Docbook XSL stylesheets. These are used to transform Docbook XML
+to PDF, HTML, ePub, and other formats.
+
+[weave,«install_docbook-xsl»]
+----
+#Download and install the standard Docbook XSL stylesheets
+echo "Installing Docbook XSL transformations"
+curl -L -O http://downloads.sourceforge.net/project/docbook/docbook-xsl/1.78.1/docbook-xsl-1.78.1.zip
+unzip -o -q docbook-xsl-1.78.1.zip
+mv docbook-xsl-1.78.1 docbook-xsl
+rm docbook-xsl-1.78.1.zip
+----
+
+=== Apache FOP
+
+Installs Apache FOP, which tranforms FO files to PDF.
+
+[weave,«install_fop»]
+----
+#Download and install Apache FOP
+echo "Installing Apache FOP"
+curl -L -O http://mirror.csclub.uwaterloo.ca/apache/xmlgraphics/fop/binaries/fop-1.1-bin.tar.gz
+tar xf fop-1.1-bin.tar.gz
+mv fop-1.1 fop
+rm fop-1.1-bin.tar.gz
+----
+
+==== XMLSH
+
+Installs XMLSH, a bash-like (POSIX) shell adding tools and piping support for
+XML files.
+
+[weave,«install-xmlsh»]
+----
+#Download and install XMLSH
+echo "Installing XMLSH"
+curl -L -O http://downloads.sourceforge.net/project/xmlsh/xmlsh/1.2.3/xmlsh_1_2_3.zip
+unzip -o -q xmlsh_1_2_3.zip
+mv xmlsh_1_2_3 xmlsh
+rm xmlsh_1_2_3
+----
+
+==== XSLTPROC
+
+Not required for OS X or Linux installations.
+
+[weave,«install-xsltproc»]
+----
+#XSLTProc is not needed for OS X or Linux platforms.
+----
+
+==== Saxon
+
+Saxon is required for XSLT 2.0 processing.
+
+[weave,«install-saxon»]
+----
+#Download and install Saxon HE
+echo "Installing SaxonHE"
+curl -L -O http://downloads.sourceforge.net/project/saxon/Saxon-HE/9.5/SaxonHE9-5-1-1J.zip
+unzip -o -q SaxonHE9-5-1-1J.zip -d saxonhe
+rm SaxonHE9-5-1J.zip
+----
+
+=== diffmk
+
+Installs Norm's `diffmk` application.
+
+[weave,«install-diffmk»]
+----
+#Download and install diffmk
+echo "Installing diffmk"
+curl -L -O http://downloads.sourceforge.net/project/diffmk/diffmk/3.0.a1/diffmk-3.0.a1.zip
+unzip -o -q diffmk-3.0.a1.zip
+mv diffmk-3.0.a1 diffmk
+rm diffmk-3.0.a1.zip
+----
+
+=== ptp-tools
+
+Installs a set of scripts and support files supporting a platform-independent
+multi-format publishing toolset and workflow. Input formats include ASCIIDoc
+and Docbook XML; output formats include XHTML, EPub3, PDF, and woven literate
+programs.
+
+[weave,«install_ptp-tools»]
+----
+#Download and install the ptp-tools scripts and support files.
+#https://github.com/davidpriest/ptp-tools.git
+#git clone --depth=1 --single-branch --branch master https://github.com/davidpriest/ptp-tools.git ptp
+----
+
+== The Open-Source Tools: Windows Edition
+
+The Windows edition requires the following software to be pre-installed:
+
+* Python
+* Java
+* Git
+* Mercurial
+
+[weave,install.bat]
+----
+REM Install ptp-tools and supporting software
+
+«winstall_asciidoc»
+
+«winstall_docbook-xml»
+
+«winstall_docbook-xsl»
+
+«winstall_fop»
+
+«winstall_xmlsh»
+
+«winstall_xsltproc»
+
+«winstall_saxon»
+
+«winstall_ptp-tools»
+
+----

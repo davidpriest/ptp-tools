@@ -2,7 +2,13 @@ Plain Text Publishing User Guide
 ================================
 :author: David Priest
 :email: ptp-tools@davidpriest.ca
-:revdate: 2013-03-16
+:keywordset: ptp-tools, publishing, plain text
+:tagline: platform agnostic, bare metal XML multipublishing
+
+:biblioid: dpca.001
+:revision: 0.1
+:releaseinfo: early beta
+:mediaobject: 
 
 == Welcome to Plain Text Publishing
 
@@ -20,7 +26,7 @@ The PTP toolset comprises:
 
 * Apache FOP, an XSL:FO to PDF rendering engine.
 
-* ptp-tools/ptp-site-defaults, a set of Bash and Windows scripts guiding the
+* ptp-tools/ptp, a set of Bash and Windows scripts guiding the
   transformation pipeline.
 
 * xsltproc, an XSLT interpreter (needed by Windows platforms).

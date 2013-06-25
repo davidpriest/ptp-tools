@@ -7,8 +7,8 @@ if defined PTP_TOOLS (
 ) else if exist ./ptp-tools/init.bat (
   call ./ptp-tools/init.bat
 ) else (
-  echo "Unable to find publishing tools 'init.bat'"
+  echo "Unable to find publishing tools: 'ptp-tools\init.bat'"
   goto :eof
 )
 
-%DOCTOOLS%\ptp-site-defaults\publish.bat _UserGuide.txt -d book
+%DOCTOOLS%\ptp\publish_adoc.bat _The_Root_Document.txt -d book

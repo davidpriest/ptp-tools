@@ -1,8 +1,4 @@
 #!/bin/bash
-# The following values are set in the source directory's publish.bat stub
-# DOCUMENT=_The_Root_Document.txt
-# PTP_TOOLS=$PWD/..
-
 # Do not modify below this line
 
 DOCUMENT=$1
@@ -11,8 +7,11 @@ EXTRA=$*
 
 [ -z "$PTP_TOOLS" ] && source ../init.sh
 
-# Source Woven Edition
-asciidoc.py --conf-file=$PWD/asciidoc-weaving.conf --doctype=book --backend=docbook $1
+# a2x commands are similar for all output
+cmdrest="--conf-file=$PTP_TOOLS/ptp/a2x.bash.conf --icons-dir=$PTP_TOOLS/ptp/icons --resource=$PTP_TOOLS/ptp/images --no-xmllint --safe $EXTRA $DOCUMENT"
+
+# Convert to Docbook 4.5
+a2x.py -k -v -v -f docbook --asciidoc-opts=--conf-file=asciidoc-weaving.conf --asciidoc-opts=--conf-file=asciidoc.conf --destination-dir=output --no-xmllint --safe $EXTRA $DOCUMENT
 
 # Publish
 #a2x.py -v --doctype=book --format=pdf --no-xmllint --xsltproc-opts="--nonet" --fop $1

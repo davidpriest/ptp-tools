@@ -4,28 +4,10 @@
 -->
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
   <xsl:param name="PTP_TOOLS" select="'MUST PASS PTP_TOOLS TO XSLTPROC!'"/>
-  <!-- Particular to customizations -->
-  <xsl:param name="banner" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/mir-banner.svg')"/>
-  <xsl:param name="bookinfo.title" select="//bookinfo/title/text()"/>
-  <xsl:param name="cover.copyright" select="//cover/para[@xml:id='cover_copyright']"/>
-  <xsl:param name="cover.date" select="//cover/para[@xml:id='cover_date']"/>
-  <xsl:param name="cover.org" select="//cover/para[@xml:id='cover_org']"/>
-  <xsl:param name="cover.orgurl" select="//cover/para[@xml:id='cover_orgurl']"/>
-  <xsl:param name="cover.subtitle" select="//cover/para[@xml:id='cover_subtitle']"/>
-  <xsl:param name="cover.title" select="//cover/para[@xml:id='cover_title']"/>
-  <xsl:param name="cover.version" select="//cover/para[@xml:id='cover_version']"/>
-  <xsl:param name="cover.graphic.default.extension">svg</xsl:param>
-  <xsl:param name="logo" select="concat('file://',$PTP_TOOLS,'/ptp-site-defaults/images/mir-logo.svg')"/>
-  <xsl:param name="logo.width">3.5pc</xsl:param>
-  <xsl:param name="narrow.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
-  <xsl:param name="pantone202.primary.red">rgb(130,36,51)</xsl:param>
-  <xsl:param name="pantone430.primary.grey">rgb(55,66,74)</xsl:param>
-  <xsl:param name="procedure.section.ttl.bkg">white</xsl:param>
-  <xsl:param name="procedure.section.ttl.color" select="$pantone202.primary.red"/>
-  <xsl:param name="release.name" select="//cover/para[@xml:id='releasename']"/>
-  <xsl:param name="tasksection.ttl.bkg">white</xsl:param>
-  <xsl:param name="tasksection.ttl.color" select="$pantone202.primary.red"/>
-
+  <!-- Particular to ptp-tools -->
+  <xsl:param name="primary.red" select="'red'"/>
+  <xsl:param name="primary.grey" select="'grey'"/>
+  <xsl:param name="ptp.cover.title">The Document Title</xsl:param>
   <!-- Stock parameters -->
   <xsl:param name="local.l10n.xml" select="document('gentext.xml')"/>
   <xsl:param name="draft.mode">
@@ -40,6 +22,7 @@
   <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
   <xsl:param name="alignment">left</xsl:param>
   <xsl:param name="body.font.family" select="'PTSans-Regular,serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
+  <xsl:param name="narrow.font.family" select="'PTSans-Narrow,sans-serif,Symbol,ZapfDingbats,UnicodeSymbols'"/>
   <xsl:param name="body.font.master">10.5</xsl:param>
   <xsl:param name="callout.defaultcolumn" select="'80'"/>
   <xsl:param name="callout.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/callouts/')"/>
@@ -216,28 +199,6 @@
     <xsl:attribute name="text-align">start</xsl:attribute>
     <xsl:attribute name="start-indent">
       <xsl:value-of select="$title.margin.left"/>
-    </xsl:attribute>
-    <xsl:attribute name="color">
-      <xsl:choose>
-        <xsl:when test="parent::section[@role='task']">
-          <xsl:value-of select="$tasksection.ttl.color"/>
-        </xsl:when>
-        <xsl:when test="parent::section[@role='procedure']">
-          <xsl:value-of select="$procedure.section.ttl.color"/>
-        </xsl:when>
-        <xsl:otherwise>transparent</xsl:otherwise>
-      </xsl:choose>
-    </xsl:attribute>
-    <xsl:attribute name="background-color">
-      <xsl:choose>
-        <xsl:when test="parent::section[@role='task']">
-          <xsl:value-of select="$tasksection.ttl.bkg"/>
-        </xsl:when>
-        <xsl:when test="parent::section[@role='procedure']">
-          <xsl:value-of select="$procedure.section.ttl.bkg"/>
-        </xsl:when>
-        <xsl:otherwise>transparent</xsl:otherwise>
-      </xsl:choose>
     </xsl:attribute>
     <xsl:attribute name="border-top">
       <xsl:choose>

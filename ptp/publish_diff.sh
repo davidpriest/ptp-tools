@@ -1,4 +1,5 @@
 #!/bin/bash
+
 [ -z "$PTP_TOOLS" ] && source ../init.sh
 
 java -cp $PTP_TOOLS/diffmk/bin/diffmk.jar net.sf.diffmk.DiffMk --ignorewhitespace "$1" "$2" "output/DIFF.xml"
