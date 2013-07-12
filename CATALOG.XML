@@ -3,7 +3,7 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
   <public publicId="-//OASIS//DTD DocBook XML V4.5//EN" uri="./docbook-xml-4.5/docbookx.dtd"/>
   <rewriteURI uriStartString="http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" rewritePrefix="./docbook-xml-4.5/docbookx.dtd"/>
-  <rewriteURI uriStartString="http://davidpriest.ca/ptp" rewritePrefix="./ptp/xsl"/>
+  <rewriteURI uriStartString="http://davidpriest.ca/ptp/xsl" rewritePrefix="./ptp/xsl"/>
   <nextCatalog catalog="./docbook-xml-4.5/catalog.xml"/>
   <nextCatalog catalog="./docbook-xml-5.0/catalog.xml"/>
   <nextCatalog catalog="./docbook-xsl/catalog.xml"/>
