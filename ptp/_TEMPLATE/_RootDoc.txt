@@ -1,0 +1,29 @@
+= Template Document
+Author Name <email@host.com>
+X.X.X, YYYY-MM-DD
+:subtitle: Cover Subtitle
+:cover-tagline: Cover Tagline
+:cover-image!: media/coverimage.png
+:logo!: media/pagelogo.png
+:biblioid: 123.def
+:releaseinfo!:
+:keywordset!: 
+
+///////////////
+Copy and rename the `Template` directory, placing it as a sibling to the
+`ptp-tools` directory.
+///////////////
+
+[preface]
+== Preface Title
+
+This is a preface.
+
+== Chapter Title
+
+This is a chapter.
+
+[appendix]
+== Appendix Title
+
+This is an appendix.

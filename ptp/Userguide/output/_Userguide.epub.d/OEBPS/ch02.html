@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Chapter 2. Library Structure</title><link rel="stylesheet" type="text/css" href="docbook-xsl.css"/><meta name="generator" content="DocBook XSL Stylesheets V1.77.1"/><meta name="keywords" content=""/></head><body><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a id="_library_structure"/>Chapter 2. Library Structure</h1></div></div></div><p>Each publication is maintained in a separate directory containing the source
+text, source images, configuration and transformation customizations, and a
+publication script. The ptp-tools publishing toolset is</p><p>The publication script (<code class="literal">publish.sh</code> or <code class="literal">publish.bat</code>) attempts to find the
+publication tools in either a sibling directory or subdirectory of the
+publication directory.</p><p>The tools are expected to be in a directory named <code class="literal">ptp-tools</code>.  If you
+cloned to a different directory, you will need to set the PTP_TOOLS
+environment variable or modify your <code class="literal">publish.sh</code> or <code class="literal">publish.bat</code> file.</p><div class="section"><div class="titlepage"><div><div><h1 class="title"><a id="_library_structure_2"/>1. LIBRARY STRUCTURE</h1></div></div></div><p>Library content consists of prose and “chunks”. Using inclusion, prose is
+intermixed with topical “chunks” to ultimately create a book or wiki. Books
+tend to take a linear approach to a topic, adding extra information to core
+units of information: exposition surrounding a “chunk” identified as a List,
+Task, Figure, Function, etc.</p><p>Documention source directories and filenames are structured for human use:</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p class="simpara">
+<code class="literal">_filename</code>
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+root document name is prefixed with an underscore.
+</li><li class="listitem">
+assists in command line autocompletion.
+</li><li class="listitem">
+file list placement tends to be consistently at the top or bottom
+</li><li class="listitem">
+content mainly comprises top-level inclusions, ie. articles and chapters.
+</li><li class="listitem">
+transformed to the ultimate deliverable: a PDF, HTML, EPub, etc.
+</li></ul></div></li><li class="listitem"><p class="simpara">
+<code class="literal">filename</code>
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+no prefixed underscore.
+</li><li class="listitem">
+not publishable from commandline.
+</li><li class="listitem">
+content mainly comprises limited prose introducing mid-level inclusions,
+    ie. chapters and sections.
+</li><li class="listitem">
+may need to use macros to adjust inclusion title levels
+</li></ul></div></li><li class="listitem"><p class="simpara">
+<code class="literal">directoryname</code>
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+contains fine-grained “chunks”.
+</li><li class="listitem">
+for inclusion in mid-level content, ie. chapters and sections.
+</li><li class="listitem">
+named to indicate content/relevance.
+</li></ul></div></li><li class="listitem"><p class="simpara">
+<code class="literal">directoryname/filename</code>
+</p><div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+topical “chunks”
+</li><li class="listitem">
+content comprises prose and lower-level inclusions, ie. sections, lists,
+    tables, etc.
+</li><li class="listitem">
+content comprises lowest-level chunks, ie. List, Task, Figure, etc.
+</li><li class="listitem">
+filenames to indicate content; avoid redundancy w/directory “chunk” category
+</li></ul></div></li></ul></div></div></div></body></html>

@@ -1,22 +1,25 @@
 #bash/sh
+#davidpriest.ca
 #Generate the Unix ptp-tools installer
 #
 
 shopt -s extglob
-if [ -e ./ptp/kickstart ] ; then
-  # Remove old tools
-  rm -r -- !(ptp*|kickstart.sh)
-  # Build scripts
+if [ -e ./ptp/quine ] ; then
+  # Build ptp-tools
   cd ptp
-  ./weave.sh ./quine/_ptp-tools.txt
-  # Move to kickstart, make executable
-  cp output/*[!_ptp-tools.xml] kickstart
-  chmod u+x kickstart/*.sh
-  # return to ptp-tools directory, install installer
+  ./tangle.sh ./quine/_ptp-tools.txt
+  # Remove old open-source tools
   cd ..
-  cp ptp/kickstart/install.sh .
-  # replace old kickstarter
-  cp ptp/kickstart/kickstart.sh .
+  if [ -e ./ptp/quine ] ; then
+    rm -r -- !(ptp*)
+  fi
+  # Install ptp-tools root-level components
+  cd ptp/output
+  chmod u+x *.sh
+  cp -f CATALOG.XML init-fop.xsl init.sh kickstart.sh install.sh README.MD ../..
+  # Install open-source tools
+  cd ../..
+  ./install.sh
 else
   echo "This does not appear to be the ptp-tools directory!"
   echo "Destructive operation cancelled."

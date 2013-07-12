@@ -79,19 +79,19 @@
           <fo:page-number/>
         </xsl:when>
         <xsl:when test="$double.sided != 0 and $sequence='even' and $position='right'">
-					<fo:external-graphic content-height="1em" src="url({$logo})"/>
+          <fo:external-graphic content-height="1em" src="url({$logo})"/>
         </xsl:when>
         <xsl:when test="$double.sided != 0 and ($sequence='odd' or $sequence='first') and $position='right'">
           <fo:page-number/>
         </xsl:when>
         <xsl:when test="$double.sided != 0 and $sequence='odd' and $position='left'">
-					<fo:external-graphic content-height="1em" src="url({$logo})"/>
+          <fo:external-graphic content-height="1em" src="url({$logo})"/>
         </xsl:when>
         <xsl:when test="$double.sided=0 and $position='right' and $pageclass!='frontcover' and $pageclass!='backcover'">
           <fo:page-number/>
         </xsl:when>
         <xsl:when test="$double.sided=0 and $position='left' and $sequence!='first' and $pageclass!='frontcover' and $pageclass!='backcover'">
-					<fo:external-graphic content-height="1em" src="url({$logo})"/>
+          <fo:external-graphic content-height="1em" src="url({$logo})"/>
         </xsl:when>
         <xsl:when test="$sequence='blank' and $pageclass!='frontcover' and $pageclass!='backcover'">
           <xsl:choose>
@@ -123,9 +123,9 @@
           <fo:region-after background-color="lightgrey" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
         </xsl:when>
         <xsl:otherwise>
-          <fo:region-body background-color="{$primary.red}" margin-bottom="0in" margin-top="0in" margin-left="0in" margin-right="0in"/>
-          <fo:region-before background-color="{$primary.red}" extent="0pt" display-align="after" region-name="xsl-region-before-first"/>
-          <fo:region-after background-color="{$primary.red}" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
+          <fo:region-body background-color="{$primary.main.color}" margin-bottom="0in" margin-top="0in" margin-left="0in" margin-right="0in"/>
+          <fo:region-before background-color="{$primary.main.color}" extent="0pt" display-align="after" region-name="xsl-region-before-first"/>
+          <fo:region-after background-color="{$primary.main.color}" extent="0pt" display-align="after" region-name="xsl-region-after-first"/>
         </xsl:otherwise>
       </xsl:choose>
     </fo:simple-page-master>
@@ -135,7 +135,7 @@
     </fo:page-sequence-master>
     <fo:page-sequence-master master-name="backcover">
       <fo:single-page-master-reference master-reference="fullpage"/>
-			<fo:single-page-master-reference master-reference="blank"/>
+      <fo:single-page-master-reference master-reference="blank"/>
     </fo:page-sequence-master>
   </xsl:template>
 </xsl:stylesheet>

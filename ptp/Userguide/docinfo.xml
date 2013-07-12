@@ -1,0 +1,17 @@
+<cover xml:id="ptp.cover.end.face">
+  <org><orgname>David Priest</orgname><address><email>ptp-tools@davidpriest.ca</email></address></org>
+</cover>
+
+<legalnotice>
+  <title>Disclaimer</title>
+  <para xml:id='copyright'>Copyright &#xA9; 2013, David Priest.</para>
+  <para>This documentation and any accompanying software are released
+  &#x201C;as is.&#x201D; David Priest makes no warranty of any kind, expressed
+  or implied, concerning these materials, including without limitation, any
+  warranties of merchantability or fitness for a particular purpose. In no
+  event will David Priest be liable for any damages, including any lost
+  profits, lost savings, or other incidental or consequential damages arising
+  out of the use, or inability of use, of documentation or any accompanying
+  software, even if informed in advance of the possibility of such
+  damages.</para>
+</legalnotice>

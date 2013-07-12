@@ -1,0 +1,10 @@
+<cover xml:id="ptp.cover.end.face">
+  <org><orgname>Organization</orgname><address>123 Street, Somewhere</address></org>
+</cover>
+
+<legalnotice>
+  <title>Disclaimer</title>
+  <para xml:id='copyright'>Copyright &#xA9; YYYY, Publisher Name.</para>
+  <para>This documentation and any accompanying software are released
+  &#x201C;as is.&#x201D;</para>
+</legalnotice>

@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE t:templates [
-<!ENTITY hsize0 "10pt">
-<!ENTITY hsize1 "12pt">
-<!ENTITY hsize2 "14.4pt">
-<!ENTITY hsize3 "17.28pt">
-<!ENTITY hsize4 "20.736pt">
-<!ENTITY hsize5 "24.8832pt">
-<!ENTITY hsize0space "7.5pt">
+<!ENTITY hsize0 "10">
+<!ENTITY hsize1 "12">
+<!ENTITY hsize2 "14.4">
+<!ENTITY hsize3 "17.28">
+<!ENTITY hsize4 "20.736">
+<!ENTITY hsize5 "24.8832">
+<!ENTITY hsize0space "7.5">
 <!-- 0.75 * hsize0 --><!ENTITY hsize1space "9pt">
 <!-- 0.75 * hsize1 --><!ENTITY hsize2space "10.8pt">
 <!-- 0.75 * hsize2 --><!ENTITY hsize3space "12.96pt">
@@ -26,11 +26,11 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="article" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" start-indent="0pt" text-align="center">
-            <title t:named-template="component.title" param:node="ancestor-or-self::article[1]" keep-with-next.within-column="always" font-size="&hsize5;" font-weight="bold"/>
+            <title t:named-template="component.title" param:node="ancestor-or-self::article[1]" keep-with-next.within-column="always" font-size="&hsize5;pt" font-weight="bold"/>
             <subtitle/>
-            <corpauthor space-before="0.5em" font-size="&hsize2;"/>
-            <authorgroup space-before="0.5em" font-size="&hsize2;"/>
-            <author space-before="0.5em" font-size="&hsize2;"/>
+            <corpauthor space-before="0.5em" font-size="&hsize2;pt"/>
+            <authorgroup space-before="0.5em" font-size="&hsize2;pt"/>
+            <author space-before="0.5em" font-size="&hsize2;pt"/>
 <!-- If you add editor, include this t:predicate attribute because only the first editor generates the list of editors.
     <editor t:predicate="[position() = 1]"/>
     -->
@@ -53,7 +53,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="set" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="division.title" param:node="ancestor-or-self::set[1]" text-align="center" font-size="&hsize5;" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:named-template="division.title" param:node="ancestor-or-self::set[1]" text-align="center" font-size="&hsize5;pt" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
             <subtitle font-family="{$title.fontset}" text-align="center"/>
             <corpauthor/>
             <authorgroup/>
@@ -79,11 +79,11 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="book" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="division.title" param:node="ancestor-or-self::book[1]" text-align="center" font-size="&hsize5;" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
-            <subtitle text-align="center" font-size="&hsize4;" space-before="&hsize4space;" font-family="{$title.fontset}"/>
-            <corpauthor font-size="&hsize3;" keep-with-next.within-column="always" space-before="2in"/>
+            <title t:named-template="division.title" param:node="ancestor-or-self::book[1]" text-align="center" font-size="&hsize5;pt" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
+            <subtitle text-align="center" font-size="&hsize4;pt" space-before="&hsize4space;" font-family="{$title.fontset}"/>
+            <corpauthor font-size="&hsize3;pt" keep-with-next.within-column="always" space-before="2in"/>
             <authorgroup space-before="2in"/>
-            <author font-size="&hsize3;" space-before="&hsize2space;" keep-with-next.within-column="always"/>
+            <author font-size="&hsize3;pt" space-before="&hsize2space;" keep-with-next.within-column="always"/>
 <!-- If you add editor, include this t:predicate attribute
            because only the first editor generates the list of editors.
       <editor t:predicate="[position() = 1]"/>
@@ -105,8 +105,8 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="part" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="division.title" param:node="ancestor-or-self::part[1]" text-align="center" font-size="&hsize5;" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
-            <subtitle text-align="center" font-size="&hsize4;" space-before="&hsize4space;" font-weight="bold" font-style="italic" font-family="{$title.fontset}"/>
+            <title t:named-template="division.title" param:node="ancestor-or-self::part[1]" text-align="center" font-size="&hsize5;pt" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
+            <subtitle text-align="center" font-size="&hsize4;pt" space-before="&hsize4space;" font-weight="bold" font-style="italic" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
   </t:titlepage-content>
@@ -119,8 +119,8 @@
     </t:titlepage>
     <t:titlepage t:element="partintro" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title text-align="center" font-size="&hsize5;" font-weight="bold" space-before="1em" font-family="{$title.fontset}"/>
-            <subtitle text-align="center" font-size="&hsize2;" font-weight="bold" font-style="italic" font-family="{$title.fontset}"/>
+            <title text-align="center" font-size="&hsize5;pt" font-weight="bold" space-before="1em" font-family="{$title.fontset}"/>
+            <subtitle text-align="center" font-size="&hsize2;pt" font-weight="bold" font-style="italic" font-family="{$title.fontset}"/>
             <corpauthor/>
             <authorgroup/>
             <author/>
@@ -145,7 +145,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="reference" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="division.title" param:node="ancestor-or-self::reference[1]" text-align="center" font-size="&hsize5;" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:named-template="division.title" param:node="ancestor-or-self::reference[1]" text-align="center" font-size="&hsize5;pt" space-before="&hsize5space;" font-weight="bold" font-family="{$title.fontset}"/>
             <subtitle font-family="{$title.fontset}" text-align="center"/>
             <corpauthor/>
             <authorgroup/>
@@ -241,7 +241,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="dedication" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::dedication[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::dedication[1]" margin-left="{$title.margin.left}" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -257,7 +257,7 @@
 <!-- Same formatting as dedication -->
     <t:titlepage t:element="acknowledgements" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::acknowledgements[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::acknowledgements[1]" margin-left="{$title.margin.left}" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -272,8 +272,8 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="preface" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::preface[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
-            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::preface[1]" font-size="&hsize5;pt" font-weight="bold" color="{$primary.contrast.color}"/>
+            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;pt" font-weight="bold"/>
             <corpauthor/>
             <authorgroup/>
             <author/>
@@ -298,11 +298,11 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="chapter" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::chapter[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
-            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
-            <corpauthor space-before="0.5em" space-after="0.5em" font-size="&hsize2;"/>
-            <authorgroup space-before="0.5em" space-after="0.5em" font-size="&hsize2;"/>
-            <author space-before="0.5em" space-after="0.5em" font-size="&hsize2;"/>
+            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::chapter[1]" font-size="&hsize5;pt" font-weight="bold" color="{$primary.contrast.color}"/>
+            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;pt" font-weight="bold"/>
+            <corpauthor space-before="0.5em" space-after="0.5em" font-size="&hsize2;pt"/>
+            <authorgroup space-before="0.5em" space-after="0.5em" font-size="&hsize2;pt"/>
+            <author space-before="0.5em" space-after="0.5em" font-size="&hsize2;pt"/>
             <othercredit/>
             <releaseinfo/>
             <copyright/>
@@ -324,8 +324,8 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="appendix" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" margin-left="{$title.margin.left}">
-            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::appendix[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
-            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;" font-weight="bold"/>
+            <title t:named-template="chapappendix.title" param:node="ancestor-or-self::appendix[1]" font-size="&hsize5;pt" font-weight="bold" color="{$primary.contrast.color}"/>
+            <subtitle space-before="0.5em" font-style="italic" font-size="&hsize2;pt" font-weight="bold"/>
             <corpauthor/>
             <authorgroup/>
             <author/>
@@ -526,7 +526,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="bibliography" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::bibliography[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::bibliography[1]" margin-left="{$title.margin.left}" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -541,7 +541,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="bibliodiv" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="component.title" param:node="ancestor-or-self::bibliodiv[1]" margin-left="{$title.margin.left}" font-size="&hsize4;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:named-template="component.title" param:node="ancestor-or-self::bibliodiv[1]" margin-left="{$title.margin.left}" font-size="&hsize4;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -556,7 +556,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="glossary" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::glossary[1]" margin-left="{$title.margin.left}" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$primary.red}"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::glossary[1]" margin-left="{$title.margin.left}" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold" color="{$primary.contrast.color}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -571,7 +571,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="glossdiv" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:named-template="component.title" param:node="ancestor-or-self::glossdiv[1]" margin-left="{$title.margin.left}" font-size="&hsize4;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:named-template="component.title" param:node="ancestor-or-self::glossdiv[1]" margin-left="{$title.margin.left}" font-size="&hsize4;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -586,7 +586,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="index" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::index[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold" color="{$primary.red}"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::index[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold" color="{$primary.contrast.color}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -619,7 +619,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="setindex" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::setindex[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;" font-family="{$title.fontset}" font-weight="bold"/>
+            <title t:force="1" t:named-template="component.title" param:node="ancestor-or-self::setindex[1]" param:pagewide="1" margin-left="0pt" font-size="&hsize5;pt" font-family="{$title.fontset}" font-weight="bold"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -634,7 +634,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="colophon" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="chapappendix.title" margin-left="{$title.margin.left}" font-family="{$title.fontset}" param:node="ancestor-or-self::colophon[1]" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
+            <title t:force="1" t:named-template="chapappendix.title" margin-left="{$title.margin.left}" font-family="{$title.fontset}" param:node="ancestor-or-self::colophon[1]" font-size="&hsize5;pt" font-weight="bold" color="{$primary.contrast.color}"/>
             <subtitle font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
@@ -664,11 +664,11 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="qandaset" t:wrapper="fo:block" font-family="{$title.fontset}">
         <t:titlepage-content t:side="recto" start-indent="0pt" text-align="center">
-            <title t:named-template="component.title" param:node="ancestor-or-self::qandaset[1]" keep-with-next.within-column="always" font-size="&hsize5;" font-weight="bold"/>
+            <title t:named-template="component.title" param:node="ancestor-or-self::qandaset[1]" keep-with-next.within-column="always" font-size="&hsize5;pt" font-weight="bold"/>
             <subtitle/>
-            <corpauthor space-before="0.5em" font-size="&hsize2;"/>
-            <authorgroup space-before="0.5em" font-size="&hsize2;"/>
-            <author space-before="0.5em" font-size="&hsize2;"/>
+            <corpauthor space-before="0.5em" font-size="&hsize2;pt"/>
+            <authorgroup space-before="0.5em" font-size="&hsize2;pt"/>
+            <author space-before="0.5em" font-size="&hsize2;pt"/>
             <othercredit space-before="0.5em"/>
             <releaseinfo space-before="0.5em"/>
             <copyright space-before="0.5em"/>
@@ -690,7 +690,7 @@
 <!-- ==================================================================== -->
     <t:titlepage t:element="table.of.contents" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'TableofContents'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-family="{$title.fontset}" font-size="&hsize5;" font-weight="bold" color="{$primary.red}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'TableofContents'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-family="{$title.fontset}" font-size="&hsize5;pt" font-weight="bold" color="{$primary.contrast.color}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -703,7 +703,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.tables" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofTables'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofTables'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -716,7 +716,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.figures" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofFigures'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofFigures'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -729,7 +729,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.examples" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofExamples'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofExamples'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -742,7 +742,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.equations" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofEquations'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofEquations'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -755,7 +755,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.procedures" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofProcedures'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofProcedures'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>
@@ -768,7 +768,7 @@
     </t:titlepage>
     <t:titlepage t:element="list.of.unknowns" t:wrapper="fo:block">
         <t:titlepage-content t:side="recto">
-            <title t:force="1" t:named-template="gentext" param:key="'ListofUnknown'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;" font-weight="bold" font-family="{$title.fontset}"/>
+            <title t:force="1" t:named-template="gentext" param:key="'ListofUnknown'" space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="{$title.margin.left}" start-indent="0pt" font-size="&hsize3;pt" font-weight="bold" font-family="{$title.fontset}"/>
         </t:titlepage-content>
         <t:titlepage-content t:side="verso">
     </t:titlepage-content>

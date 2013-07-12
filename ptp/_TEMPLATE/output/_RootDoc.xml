@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<book lang="en">
+<bookinfo>
+  <title>Template Document</title>
+  <subtitle>Cover Subtitle</subtitle>
+  <para role="tagline">Cover Tagline</para>
+  <biblioid>123.def</biblioid>
+  <date>YYYY-MM-DD</date>
+  # To ensure valid articleinfo/bookinfo when there is no AsciiDoc header.
+  <author>
+  <firstname>Author</firstname>
+  <surname>Name</surname>
+  <email>email@host.com</email>
+  </author>
+  <authorinitials>AN</authorinitials>
+  <revhistory><revision><date>YYYY-MM-DD</date><authorinitials>AN</authorinitials></revision></revhistory>
+  <cover xml:id="ptp.cover.end.face">
+  <org><orgname>Organization</orgname><address>123 Street, Somewhere<email>email@host.com</email></address></org>
+</cover>
+
+<legalnotice>
+  <title>Disclaimer</title>
+  <para xml:id='copyright'>Copyright &#xA9; YYYY, Publisher Name.</para>
+  <para>This documentation and any accompanying software are released
+  &#x201C;as is.&#x201D;</para>
+</legalnotice>
+</bookinfo>
+<preface id="_preface_title">
+<title>Preface Title</title>
+<simpara>This is a preface.</simpara>
+</preface>
+<chapter id="_chapter_title">
+<title>Chapter Title</title>
+<simpara>This is a chapter.</simpara>
+</chapter>
+<appendix id="_appendix_title">
+<title>Appendix Title</title>
+<simpara>This is an appendix.</simpara>
+</appendix>
+</book>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd">
+<?asciidoc-toc?>
+<?asciidoc-numbered?>
+
+<book lang="en">
+<bookinfo>
+  <title>Plain Text Publishing</title>
+  <subtitle>User Guide</subtitle>
+  <para role="tagline">Platform agnostic, bare metal XML multipublishing.</para>
+  <graphic role="cover" fileref="media/beaver.png"></graphic>
+  <graphic role="logo" fileref="media/beaver.png"></graphic>
+  <biblioid>dcp.ptp.ug</biblioid>
+  <date>2013-06-25</date>
+  <releaseinfo>Early Beta</releaseinfo>
+  # To ensure valid articleinfo/bookinfo when there is no AsciiDoc header.
+  <keywordset>ptp-tools, publishing, plain text</keywordset>
+  <author>
+  <firstname>David</firstname>
+  <surname>Priest</surname>
+  <email>ptp-tools@davidpriest.ca</email>
+  </author>
+  <authorinitials>DP</authorinitials>
+  <revhistory><revision><revnumber>1.0.0</revnumber><date>2013-06-25</date><authorinitials>DP</authorinitials></revision></revhistory>
+  <cover xml:id="ptp.cover.end.face">
+  <org><orgname>David Priest</orgname><address><email>ptp-tools@davidpriest.ca</email></address></org>
+</cover>
+
+<legalnotice>
+  <title>Disclaimer</title>
+  <para xml:id='copyright'>Copyright &#xA9; 2013, David Priest.</para>
+  <para>This documentation and any accompanying software are released
+  &#x201C;as is.&#x201D; David Priest makes no warranty of any kind, expressed
+  or implied, concerning these materials, including without limitation, any
+  warranties of merchantability or fitness for a particular purpose. In no
+  event will David Priest be liable for any damages, including any lost
+  profits, lost savings, or other incidental or consequential damages arising
+  out of the use, or inability of use, of documentation or any accompanying
+  software, even if informed in advance of the possibility of such
+  damages.</para>
+</legalnotice>
+</bookinfo>
+<chapter id="_welcome_to_plain_text_publishing">
+<title>Welcome to Plain Text Publishing!</title>
+<simpara>ptp-tools combines a plain text markup translator with a industry-standard
+open-source publishing toolset that generates professional-quality PDF, ePub,
+and XHTML final documents. Pre-publication transformation and publication
+layout and style are fully customizable, supporting both a corporate standard
+style and customizations of that style for each document.</simpara>
+<simpara>ptp-tools comprises:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+ASCIIDoc, a plain text markup processing system.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Docbook XML and the Stayton XSL:FO transformations.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Apache FOP, an XSL:FO to PDF rendering engine.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+ptp-tools/ptp, a set of Bash and Windows scripts guiding the
+  transformation pipeline.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+xsltproc, an XSLT interpreter (needed by Windows platforms).
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+XMLSh, a POSIX-flavoured "Bash plus XML" scripting interpreter.
+</simpara>
+</listitem>
+</itemizedlist>
+<simpara>ptp-tools requires pre-installation of:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+Python.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+Java.
+</simpara>
+</listitem>
+</itemizedlist>
+</chapter>
+<chapter id="_library_structure">
+<title>Library Structure</title>
+<simpara>Each publication is maintained in a separate directory containing the source
+text, source images, configuration and transformation customizations, and a
+publication script. The ptp-tools publishing toolset is</simpara>
+<simpara>The publication script (<literal>publish.sh</literal> or <literal>publish.bat</literal>) attempts to find the
+publication tools in either a sibling directory or subdirectory of the
+publication directory.</simpara>
+<simpara>The tools are expected to be in a directory named <literal>ptp-tools</literal>.  If you
+cloned to a different directory, you will need to set the PTP_TOOLS
+environment variable or modify your <literal>publish.sh</literal> or <literal>publish.bat</literal> file.</simpara>
+<section id="_library_structure_2">
+<title>LIBRARY STRUCTURE</title>
+<simpara>Library content consists of prose and “chunks”. Using inclusion, prose is
+intermixed with topical “chunks” to ultimately create a book or wiki. Books
+tend to take a linear approach to a topic, adding extra information to core
+units of information: exposition surrounding a “chunk” identified as a List,
+Task, Figure, Function, etc.</simpara>
+<simpara>Documention source directories and filenames are structured for human use:</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+<literal>_filename</literal>
+</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+root document name is prefixed with an underscore.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+assists in command line autocompletion.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+file list placement tends to be consistently at the top or bottom
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+content mainly comprises top-level inclusions, ie. articles and chapters.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+transformed to the ultimate deliverable: a PDF, HTML, EPub, etc.
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>
+<literal>filename</literal>
+</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+no prefixed underscore.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+not publishable from commandline.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+content mainly comprises limited prose introducing mid-level inclusions,
+    ie. chapters and sections.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+may need to use macros to adjust inclusion title levels
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>
+<literal>directoryname</literal>
+</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+contains fine-grained “chunks”.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+for inclusion in mid-level content, ie. chapters and sections.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+named to indicate content/relevance.
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+<listitem>
+<simpara>
+<literal>directoryname/filename</literal>
+</simpara>
+<itemizedlist>
+<listitem>
+<simpara>
+topical “chunks”
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+content comprises prose and lower-level inclusions, ie. sections, lists,
+    tables, etc.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+content comprises lowest-level chunks, ie. List, Task, Figure, etc.
+</simpara>
+</listitem>
+<listitem>
+<simpara>
+filenames to indicate content; avoid redundancy w/directory “chunk” category
+</simpara>
+</listitem>
+</itemizedlist>
+</listitem>
+</itemizedlist>
+</section>
+</chapter>
+</book>

@@ -5,9 +5,20 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format" version="1.0">
   <xsl:param name="PTP_TOOLS" select="'MUST PASS PTP_TOOLS TO XSLTPROC!'"/>
   <!-- Particular to ptp-tools -->
-  <xsl:param name="primary.red" select="'red'"/>
-  <xsl:param name="primary.grey" select="'grey'"/>
-  <xsl:param name="ptp.cover.title">The Document Title</xsl:param>
+  <xsl:param name="primary.main.color">wheat</xsl:param>
+  <xsl:param name="primary.contrast.color">#7B89A3</xsl:param>
+  <xsl:param name="ptp.title" select="//bookinfo/title"/>
+  <xsl:param name="ptp.cover.subtitle" select="//bookinfo/subtitle"/>
+  <xsl:param name="ptp.cover.tagline" select="//bookinfo/para[@role='tagline']"/>
+  <xsl:param name="ptp.releaseinfo" select="//bookinfo/releaseinfo"/>
+  <xsl:param name="ptp.cover.version" select="//bookinfo/revhistory"/>
+  <xsl:param name="ptp.cover.date" select="//bookinfo/date"/>
+  <xsl:param name="ptp.cover.image" select="//bookinfo/graphic[@role='cover']/@fileref"/>
+  <xsl:param name="logo" select="//bookinfo/graphic[@role='logo']/@fileref"/>
+  <xsl:param name="logo.height" select="'48pt'"/>
+  <xsl:param name="ptp.cover.org" select="//bookinfo/date"/>
+  <xsl:param name="ptp.cover.orgurl" select="//bookinfo/date"/>
+  <xsl:param name="ptp.cover.copyright">&#xA9;<xsl:value-of select="substring(//bookinfo/date,1,4)"/>, <xsl:value-of select="//bookinfo/copyright/holder"/></xsl:param>
   <!-- Stock parameters -->
   <xsl:param name="local.l10n.xml" select="document('gentext.xml')"/>
   <xsl:param name="draft.mode">
@@ -114,6 +125,11 @@
     <xsl:attribute name="font-size">
       <xsl:choose>
         <xsl:when test="@role='srcfile'">
+          <xsl:call-template name="set.sect.fontsize">
+            <xsl:with-param name="fsize">0.66</xsl:with-param>
+          </xsl:call-template>
+        </xsl:when>
+        <xsl:when test="@role='litsrc'">
           <xsl:call-template name="set.sect.fontsize">
             <xsl:with-param name="fsize">0.66</xsl:with-param>
           </xsl:call-template>

@@ -1,0 +1,71 @@
+= Plain Text Publishing
+David Priest <ptp-tools@davidpriest.ca>
+1.0.0, 2013-06-25
+:subtitle: User Guide
+:cover-tagline: Platform agnostic, bare metal XML multipublishing.
+:cover-image: media/beaver.png
+:logo: media/beaver.png
+:biblioid: dcp.ptp.ug
+:releaseinfo: Early Beta
+:keywordset: ptp-tools, publishing, plain text
+
+
+== Welcome to Plain Text Publishing!
+
+ptp-tools combines a plain text markup translator with a industry-standard
+open source publishing toolset that generates professional-quality PDF, ePub,
+and XHTML final documents. Pre-publication transformation and publication
+layout and style are fully customizable, supporting both a corporate standard
+style and customizations of that style for each document.
+
+ptp-tools comprises:
+
+* ASCIIDoc, a plain text markup processing system.
+
+* Docbook XML and the Stayton XSL:FO transformations.
+
+* Apache FOP, an XSL:FO to PDF rendering engine.
+
+* ptp-tools/ptp, a set of Bash and Windows scripts guiding the
+  transformation pipeline.
+
+* xsltproc, an XSLT interpreter (needed by Windows platforms).
+
+* XMLSh, a POSIX-flavoured "Bash plus XML" scripting interpreter.
+
+ptp-tools requires pre-installation of:
+
+* Python.
+
+* Java.
+
+
+== Installation
+
+Download or clone ptp-tools to your document library directory. Open
+`ptp-tools` and run `install.sh` or `install.bat`. The required open source
+components will be downloaded and installed in the same directory as the
+installation script.
+
+To start you off with creating new documents, you can copy `ptp/_TEMPLATE` to
+your document library directory. `_TEMPLATE` includes the publishing scripts,
+stub entries for customizing ASCIIDoc and XSL processing, a sample document,
+and a sample docinfo.
+
+
+== Library Structure
+
+Each publication is maintained in a separate directory containing the source
+text, source images, configuration and transformation customizations, and a
+publication script.
+
+The publication script (`publish.sh` or `publish.bat`) attempts to find the
+publication tools in either a sibling directory or subdirectory of the
+publication directory. 
+
+The tools are expected to be in a directory named `ptp-tools`.  If you 
+cloned to a different directory, you will need to set the PTP_TOOLS 
+environment variable or modify your `publish.sh` or `publish.bat` file.
+
+:leveloffset: 2
+include::ABOUT.txt[]
