@@ -15,7 +15,7 @@ mkdir -p output
 rm -rf output/*
 
 # a2x commands are similar for all output
-cmdrest="--conf-file=$PTP_TOOLS/ptp/a2x.bash.conf --asciidoc-opts=--conf-file=$PTP_TOOLS/ptp/asciidoc-tangle.conf --icons-dir=$PTP_TOOLS/ptp/icons --resource=$PTP_TOOLS/ptp/images --no-xmllint --safe $EXTRA $DOCUMENT"
+cmdrest="--conf-file=$PTP_TOOLS/ptp/a2x.bash.conf --icons-dir=$PTP_TOOLS/ptp/icons --resource=$PTP_TOOLS/ptp/images --no-xmllint --safe $EXTRA $DOCUMENT"
 
 echo "Transforming to Draft PDF"
 a2x.py -k -v -v -f pdf --fop --xsl-file=ptp-config/xsl/fo.xsl --destination-dir=output $cmdrest
