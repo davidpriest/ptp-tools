@@ -20,4 +20,5 @@
   <xsl:import href="fo/titlepages.templates.xsl"/>
   <xsl:import href="fo/titles.xsl"/>
   <xsl:import href="fo/diff.xsl"/>
+  <xsl:param name="draft.mode">yes</xsl:param>
 </xsl:stylesheet>

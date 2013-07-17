@@ -12,6 +12,7 @@
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
   <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/xhtml/chunk.xsl"/>
   <xsl:import href="html/common-html.xsl"/>
+  <xsl:param name="draft.mode">yes</xsl:param>
 
   <xsl:param name="navig.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
   <xsl:param name="admon.graphics.path" select="concat('file://',$PTP_TOOLS,'/ptp/icons/')"/>
