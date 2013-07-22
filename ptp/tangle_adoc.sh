@@ -11,7 +11,7 @@ EXTRA=$*
 cmdrest="--conf-file=$PTP_TOOLS/ptp/a2x.bash.conf --icons-dir=$PTP_TOOLS/ptp/icons --resource=$PTP_TOOLS/ptp/images --no-xmllint --safe $EXTRA $DOCUMENT"
 
 # Convert to Docbook 4.5
-a2x.py -k -v -v -f docbook --asciidoc-opts=--conf-file=asciidoc-tangle.conf --asciidoc-opts=--conf-file=asciidoc.conf --destination-dir=output --no-xmllint --safe $EXTRA $DOCUMENT
+a2x.py -k -v -v -f docbook --destination-dir=output $cmdrest
 
 # Publish
 #a2x.py -v --doctype=book --format=pdf --no-xmllint --xsltproc-opts="--nonet" --fop $1
